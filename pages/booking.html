@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>الحجز - الفضل للاتصالات</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Readex+Pro:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="../css/font-awesome-pro.css?v=1.1" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" />
+  <link rel="stylesheet" href="../css/bootstrap.min.css?v=1.1" />
+  <link rel="stylesheet" href="../css/style.css?v=4.2" />
+</head>
+
+<body class="home-page-body">
+
+  <!-- Top Navbar -->
+  <nav class="home-navbar" id="homeNavbar">
+    <div class="home-nav-container">
+
+      <!-- RIGHT (RTL-start): Brand Logo & Title -->
+      <a href="home.html" class="home-nav-brand">
+        <div class="home-brand-logo-wrapper">
+          <img src="../src/image/logo.webp" alt="الفضل للاتصالات" />
+        </div>
+        <div class="home-brand-text-col">
+          <span class="home-brand-name">الفضل للاتصالات</span>
+          <span class="home-brand-sub">بوابة العملاء المعتمدة</span>
+        </div>
+      </a>
+
+      <!-- CENTER (desktop): Navigation Links -->
+      <ul class="home-nav-links">
+        <li><a href="home.html" class="home-nav-link"><i class="fa-solid fa-house-chimney"></i><span>لوحتي</span></a>
+        </li>
+        <li><a href="booking.html" class="home-nav-link active"><i
+              class="fa-solid fa-calendar-check"></i><span>الحجز</span></a></li>
+        <li><a href="orders.html" class="home-nav-link"><i class="fa-solid fa-box"></i><span>طلباتي</span></a></li>
+        <li><a href="account.html" class="home-nav-link"><i class="fa-solid fa-wallet"></i><span>حسابي</span></a></li>
+        <li><a href="profile.html" class="home-nav-link"><i class="fa-solid fa-user-gear"></i><span>ملفي</span></a></li>
+      </ul>
+
+      <!-- LEFT (RTL-end): Controls (Bell + Circular Logout Button + Mobile Hamburger) -->
+      <div class="home-nav-left-controls">
+        <div class="nav-bell-icon" title="الإشعارات">
+          <i class="fa-regular fa-bell"></i>
+          <span class="nav-bell-dot"></span>
+        </div>
+        <a href="../index.html" class="nav-logout-icon" title="تسجيل الخروج" aria-label="تسجيل الخروج">
+          <i class="fa-solid fa-right-from-bracket"></i>
+        </a>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" title="القائمة" aria-label="فتح القائمة">
+          <i class="fa-solid fa-bars" id="mobileMenuIcon"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Collapse Menu (slide down) -->
+    <div class="mobile-nav-collapse" id="mobileNavCollapse">
+      <a href="home.html" class="mobile-collapse-link"><i class="fa-solid fa-house-chimney me-2"></i>لوحتي</a>
+      <a href="booking.html" class="mobile-collapse-link active"><i
+          class="fa-solid fa-calendar-check me-2"></i>الحجز</a>
+      <a href="orders.html" class="mobile-collapse-link"><i class="fa-solid fa-box me-2"></i>طلباتي</a>
+      <a href="account.html" class="mobile-collapse-link"><i class="fa-solid fa-wallet me-2"></i>حسابي</a>
+      <a href="profile.html" class="mobile-collapse-link"><i class="fa-solid fa-user-gear me-2"></i>ملفي</a>
+      <a href="../index.html" class="mobile-collapse-link mobile-collapse-logout">
+        <i class="fa-solid fa-right-from-bracket me-2"></i>
+        تسجيل الخروج
+      </a>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main class="home-main-container" style="margin-top: 24px;">
+
+    <!-- Booking Hero Header Banner -->
+    <div class="booking-hero-header">
+      <div class="booking-hero-main">
+        <div class="booking-hero-icon">
+          <i class="fa-solid fa-boxes-stacked"></i>
+        </div>
+        <div>
+          <span class="booking-portal-badge">
+            <span class="pulse-dot-mini green"></span>
+            <span>بوابة التوريد والحجز الفوري المعتمد</span>
+          </span>
+          <h2>
+            <span>حجز وتوريد الأجهزة الذكية</span>
+          </h2>
+          <p>احجز دفعات الأجهزة بعمولة فورية %7 وضمان الوكالة سنتين مع شحن مؤمّن معتمد</p>
+        </div>
+      </div>
+      <div class="booking-hero-aside">
+        <div class="booking-stat-pill pill-primary">
+          <i class="fa-solid fa-mobile-screen"></i>
+          <span>6 دفعات متاحة للحجز</span>
+        </div>
+        <div class="booking-stat-pill pill-success">
+          <i class="fa-solid fa-percent"></i>
+          <span>عمولة ربح 7% فورية</span>
+        </div>
+        <div class="booking-stat-pill">
+          <i class="fa-solid fa-shield-halved"></i>
+          <span>ضمان سنتين معتمد</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Booking Filter & Search Toolbar -->
+    <div class="booking-toolbar mb-4">
+      <div class="booking-filter-chips d-flex flex-wrap align-items-center justify-content-center gap-2 w-100 my-2" id="filterChipsContainer">
+        <button type="button" class="filter-chip active" data-filter="all">
+          <i class="fa-solid fa-layer-group"></i>
+          <span>الكل (6)</span>
+        </button>
+        <button type="button" class="filter-chip" data-filter="promax">
+          <i class="fa-solid fa-star"></i>
+          <span>iPhone 17 Pro Max</span>
+        </button>
+        <button type="button" class="filter-chip" data-filter="ip17">
+          <span>iPhone 17</span>
+        </button>
+        <button type="button" class="filter-chip" data-filter="1t">
+          <i class="fa-solid fa-microchip"></i>
+          <span>سعة 1TB</span>
+        </button>
+        <button type="button" class="filter-chip" data-filter="512">
+          <span>سعة 512GB</span>
+        </button>
+        <button type="button" class="filter-chip" data-filter="256">
+          <span>سعة 256GB</span>
+        </button>
+      </div>
+      <div class="table-search-box-wrapper my-2">
+        <input type="text" class="form-control" id="bookingSearchInput"
+          placeholder="بحث باسم الجهاز أو السعة أو الـ SKU...">
+        <button type="button" class="search-btn-inside" aria-label="بحث">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Products Grid (6 cards matching reference design) -->
+    <div class="products-grid" id="productsGrid">
+
+      <!-- Card 1: Apple iPhone 17 Pro Max 1T برتقالي كوزمك -->
+      <div class="product-card" data-category="promax 1t" data-name="Apple iPhone 17 Pro Max 1T برتقالي كوزمك"
+        data-sku="IP17PROMAX-1T-ORANG-V260607-V260628-V260712">
+        <div class="product-card-image">
+          <span class="product-badge-storage"><i class="fa-solid fa-microchip"></i> 1TB</span>
+          <span class="product-badge-stock"><span class="pulse-dot-mini green"></span> متاح (502)</span>
+          <img src="../src/image/product_1 (3).webp" alt="iPhone 17 Pro Max برتقالي كوزمك" />
+          <span class="product-badge-color">
+            <span class="color-dot dot-orange"></span>
+            <span>برتقالي كوزمك</span>
+          </span>
+        </div>
+        <div class="product-card-info">
+          <span class="product-brand-tag">Apple Inc. · الجيل السابع عشر</span>
+          <h3 class="product-card-name">Apple iPhone 17 Pro Max 1T برتقالي كوزمك</h3>
+          <span class="product-card-sku">SKU: IP17PROMAX-1T-ORANG-V260607-V260628-V260712</span>
+        </div>
+        <div class="product-qty-box">
+          <span class="product-qty-title"><i class="fa-solid fa-hashtag text-primary"></i> الكمية:</span>
+          <div class="product-qty-controls">
+            <button type="button" class="qty-btn" onclick="changeQty(this,-1)">−</button>
+            <span class="qty-val" data-unit="5888" data-max="502">1</span>
+            <button type="button" class="qty-btn" onclick="changeQty(this,1)">+</button>
+          </div>
+          <div class="product-limit-box">
+            <span class="product-limit-title">الحد:</span>
+            <span class="product-limit-num">502</span>
+          </div>
+        </div>
+        <div class="product-price-box">
+          <div class="product-price-top-row">
+            <span class="product-price-unit-title">سعر الوحدة (شامل الضريبة)</span>
+            <div class="product-price-unit-val">
+              <span class="price-num">5,888.00</span>
+              <span class="price-curr">ريال</span>
+            </div>
+          </div>
+          <div class="product-price-bottom-row">
+            <span class="product-price-total-title">الإجمالي المستحق</span>
+            <span class="product-price-total-val">5,888.00 ريال</span>
+          </div>
+        </div>
+        <div class="product-commission-badge">
+          <div class="commission-badge-right">
+            <i class="fa-solid fa-coins"></i>
+            <span>عمولة فورية (%7):</span>
+          </div>
+          <span class="commission-text">412.16 ريال</span>
+        </div>
+        <button type="button" class="btn-book-now" onclick="handleBookClick(this)">
+          <i class="fa-solid fa-cart-plus"></i>
+          <span>احجز الآن</span>
+        </button>
+      </div>
+
+      <!-- Card 2: Apple iPhone 17 Pro Max 512GB أزرق داكن -->
+      <div class="product-card" data-category="promax 512" data-name="Apple iPhone 17 Pro Max 512GB أزرق داكن"
+        data-sku="IP17PROMAX-512-BLUE-V260412-BB-V260628-V260712-26">
+        <div class="product-card-image">
+          <span class="product-badge-storage"><i class="fa-solid fa-microchip"></i> 512GB</span>
+          <span class="product-badge-stock"><span class="pulse-dot-mini green"></span> متاح (489)</span>
+          <img src="../src/image/product_1 (2).webp" alt="iPhone 17 Pro Max أزرق داكن" />
+          <span class="product-badge-color">
+            <span class="color-dot dot-blue"></span>
+            <span>أزرق داكن</span>
+          </span>
+        </div>
+        <div class="product-card-info">
+          <span class="product-brand-tag">Apple Inc. · الجيل السابع عشر</span>
+          <h3 class="product-card-name">Apple iPhone 17 Pro Max 512GB أزرق داكن</h3>
+          <span class="product-card-sku">SKU: IP17PROMAX-512-BLUE-V260412-BB-V260628-V260712-26</span>
+        </div>
+        <div class="product-qty-box">
+          <span class="product-qty-title"><i class="fa-solid fa-hashtag text-primary"></i> الكمية:</span>
+          <div class="product-qty-controls">
+            <button type="button" class="qty-btn" onclick="changeQty(this,-1)">−</button>
+            <span class="qty-val" data-unit="5111" data-max="489">1</span>
+            <button type="button" class="qty-btn" onclick="changeQty(this,1)">+</button>
+          </div>
+          <div class="product-limit-box">
+            <span class="product-limit-title">الحد:</span>
+            <span class="product-limit-num">489</span>
+          </div>
+        </div>
+        <div class="product-price-box">
+          <div class="product-price-top-row">
+            <span class="product-price-unit-title">سعر الوحدة (شامل الضريبة)</span>
+            <div class="product-price-unit-val">
+              <span class="price-num">5,111.00</span>
+              <span class="price-curr">ريال</span>
+            </div>
+          </div>
+          <div class="product-price-bottom-row">
+            <span class="product-price-total-title">الإجمالي المستحق</span>
+            <span class="product-price-total-val">5,111.00 ريال</span>
+          </div>
+        </div>
+        <div class="product-commission-badge">
+          <div class="commission-badge-right">
+            <i class="fa-solid fa-coins"></i>
+            <span>عمولة فورية (%7):</span>
+          </div>
+          <span class="commission-text">357.77 ريال</span>
+        </div>
+        <button type="button" class="btn-book-now" onclick="handleBookClick(this)">
+          <i class="fa-solid fa-cart-plus"></i>
+          <span>احجز الآن</span>
+        </button>
+      </div>
+
+      <!-- Card 3: Apple iPhone 17 Pro Max 512GB أزرق داكن -->
+      <div class="product-card" data-category="promax 512" data-name="Apple iPhone 17 Pro Max 512GB أزرق داكن"
+        data-sku="IP17PROMAX-512-BLUE-V260811">
+        <div class="product-card-image">
+          <span class="product-badge-storage"><i class="fa-solid fa-microchip"></i> 512GB</span>
+          <span class="product-badge-stock"><span class="pulse-dot-mini green"></span> متاح (488)</span>
+          <img src="../src/image/product_1 (2).webp" alt="iPhone 17 Pro Max أزرق داكن" />
+          <span class="product-badge-color">
+            <span class="color-dot dot-blue"></span>
+            <span>أزرق داكن</span>
+          </span>
+        </div>
+        <div class="product-card-info">
+          <span class="product-brand-tag">Apple Inc. · الجيل السابع عشر</span>
+          <h3 class="product-card-name">Apple iPhone 17 Pro Max 512GB أزرق داكن</h3>
+          <span class="product-card-sku">SKU: IP17PROMAX-512-BLUE-V260811</span>
+        </div>
+        <div class="product-qty-box">
+          <span class="product-qty-title"><i class="fa-solid fa-hashtag text-primary"></i> الكمية:</span>
+          <div class="product-qty-controls">
+            <button type="button" class="qty-btn" onclick="changeQty(this,-1)">−</button>
+            <span class="qty-val" data-unit="5111" data-max="488">1</span>
+            <button type="button" class="qty-btn" onclick="changeQty(this,1)">+</button>
+          </div>
+          <div class="product-limit-box">
+            <span class="product-limit-title">الحد:</span>
+            <span class="product-limit-num">488</span>
+          </div>
+        </div>
+        <div class="product-price-box">
+          <div class="product-price-top-row">
+            <span class="product-price-unit-title">سعر الوحدة (شامل الضريبة)</span>
+            <div class="product-price-unit-val">
+              <span class="price-num">5,111.00</span>
+              <span class="price-curr">ريال</span>
+            </div>
+          </div>
+          <div class="product-price-bottom-row">
+            <span class="product-price-total-title">الإجمالي المستحق</span>
+            <span class="product-price-total-val">5,111.00 ريال</span>
+          </div>
+        </div>
+        <div class="product-commission-badge">
+          <div class="commission-badge-right">
+            <i class="fa-solid fa-coins"></i>
+            <span>عمولة فورية (%7):</span>
+          </div>
+          <span class="commission-text">357.77 ريال</span>
+        </div>
+        <button type="button" class="btn-book-now" onclick="handleBookClick(this)">
+          <i class="fa-solid fa-cart-plus"></i>
+          <span>احجز الآن</span>
+        </button>
+      </div>
+
+      <!-- Card 4: Apple iPhone 17 Pro Max 1T أزرق داكن -->
+      <div class="product-card" data-category="promax 1t" data-name="Apple iPhone 17 Pro Max 1T أزرق داكن"
+        data-sku="IP17PROMAX-1T-BLUE V260607-V260628 V260712">
+        <div class="product-card-image">
+          <span class="product-badge-storage"><i class="fa-solid fa-microchip"></i> 1TB</span>
+          <span class="product-badge-stock"><span class="pulse-dot-mini green"></span> متاح (486)</span>
+          <img src="../src/image/product_1 (2).webp" alt="iPhone 17 Pro Max أزرق داكن" />
+          <span class="product-badge-color">
+            <span class="color-dot dot-blue"></span>
+            <span>أزرق داكن</span>
+          </span>
+        </div>
+        <div class="product-card-info">
+          <span class="product-brand-tag">Apple Inc. · الجيل السابع عشر</span>
+          <h3 class="product-card-name">Apple iPhone 17 Pro Max 1T أزرق داكن</h3>
+          <span class="product-card-sku">SKU: IP17PROMAX-1T-BLUE V260607-V260628 V260712</span>
+        </div>
+        <div class="product-qty-box">
+          <span class="product-qty-title"><i class="fa-solid fa-hashtag text-primary"></i> الكمية:</span>
+          <div class="product-qty-controls">
+            <button type="button" class="qty-btn" onclick="changeQty(this,-1)">−</button>
+            <span class="qty-val" data-unit="5888" data-max="486">1</span>
+            <button type="button" class="qty-btn" onclick="changeQty(this,1)">+</button>
+          </div>
+          <div class="product-limit-box">
+            <span class="product-limit-title">الحد:</span>
+            <span class="product-limit-num">486</span>
+          </div>
+        </div>
+        <div class="product-price-box">
+          <div class="product-price-top-row">
+            <span class="product-price-unit-title">سعر الوحدة (شامل الضريبة)</span>
+            <div class="product-price-unit-val">
+              <span class="price-num">5,888.00</span>
+              <span class="price-curr">ريال</span>
+            </div>
+          </div>
+          <div class="product-price-bottom-row">
+            <span class="product-price-total-title">الإجمالي المستحق</span>
+            <span class="product-price-total-val">5,888.00 ريال</span>
+          </div>
+        </div>
+        <div class="product-commission-badge">
+          <div class="commission-badge-right">
+            <i class="fa-solid fa-coins"></i>
+            <span>عمولة فورية (%7):</span>
+          </div>
+          <span class="commission-text">412.16 ريال</span>
+        </div>
+        <button type="button" class="btn-book-now" onclick="handleBookClick(this)">
+          <i class="fa-solid fa-cart-plus"></i>
+          <span>احجز الآن</span>
+        </button>
+      </div>
+
+      <!-- Card 5: Apple iPhone 17 Pro Max 512GB برتقالي كوزمك -->
+      <div class="product-card" data-category="promax 512" data-name="Apple iPhone 17 Pro Max 512GB برتقالي كوزمك"
+        data-sku="IP17PROMAX-512-ORANG-V260811">
+        <div class="product-card-image">
+          <span class="product-badge-storage"><i class="fa-solid fa-microchip"></i> 512GB</span>
+          <span class="product-badge-stock"><span class="pulse-dot-mini green"></span> متاح (484)</span>
+          <img src="../src/image/product_1 (3).webp" alt="iPhone 17 Pro Max برتقالي كوزمك" />
+          <span class="product-badge-color">
+            <span class="color-dot dot-orange"></span>
+            <span>برتقالي كوزمك</span>
+          </span>
+        </div>
+        <div class="product-card-info">
+          <span class="product-brand-tag">Apple Inc. · الجيل السابع عشر</span>
+          <h3 class="product-card-name">Apple iPhone 17 Pro Max 512GB برتقالي كوزمك</h3>
+          <span class="product-card-sku">SKU: IP17PROMAX-512-ORANG-V260811</span>
+        </div>
+        <div class="product-qty-box">
+          <span class="product-qty-title"><i class="fa-solid fa-hashtag text-primary"></i> الكمية:</span>
+          <div class="product-qty-controls">
+            <button type="button" class="qty-btn" onclick="changeQty(this,-1)">−</button>
+            <span class="qty-val" data-unit="5111" data-max="484">1</span>
+            <button type="button" class="qty-btn" onclick="changeQty(this,1)">+</button>
+          </div>
+          <div class="product-limit-box">
+            <span class="product-limit-title">الحد:</span>
+            <span class="product-limit-num">484</span>
+          </div>
+        </div>
+        <div class="product-price-box">
+          <div class="product-price-top-row">
+            <span class="product-price-unit-title">سعر الوحدة (شامل الضريبة)</span>
+            <div class="product-price-unit-val">
+              <span class="price-num">5,111.00</span>
+              <span class="price-curr">ريال</span>
+            </div>
+          </div>
+          <div class="product-price-bottom-row">
+            <span class="product-price-total-title">الإجمالي المستحق</span>
+            <span class="product-price-total-val">5,111.00 ريال</span>
+          </div>
+        </div>
+        <div class="product-commission-badge">
+          <div class="commission-badge-right">
+            <i class="fa-solid fa-coins"></i>
+            <span>عمولة فورية (%7):</span>
+          </div>
+          <span class="commission-text">357.77 ريال</span>
+        </div>
+        <button type="button" class="btn-book-now" onclick="handleBookClick(this)">
+          <i class="fa-solid fa-cart-plus"></i>
+          <span>احجز الآن</span>
+        </button>
+      </div>
+
+      <!-- Card 6: Apple iPhone 17 256GB لافندر -->
+      <div class="product-card" data-category="ip17 256" data-name="Apple iPhone 17 256GB لافندر"
+        data-sku="IP17-256-LAVENDER V260712">
+        <div class="product-card-image">
+          <span class="product-badge-storage"><i class="fa-solid fa-microchip"></i> 256GB</span>
+          <span class="product-badge-stock"><span class="pulse-dot-mini green"></span> متاح (482)</span>
+          <img src="../src/image/product_1 (1).webp" alt="iPhone 17 256GB لافندر" />
+          <span class="product-badge-color">
+            <span class="color-dot dot-lavender"></span>
+            <span>لافندر</span>
+          </span>
+        </div>
+        <div class="product-card-info">
+          <span class="product-brand-tag">Apple Inc. · الفئة القياسية</span>
+          <h3 class="product-card-name">Apple iPhone 17 256GB لافندر</h3>
+          <span class="product-card-sku">SKU: IP17-256-LAVENDER V260712</span>
+        </div>
+        <div class="product-qty-box">
+          <span class="product-qty-title"><i class="fa-solid fa-hashtag text-primary"></i> الكمية:</span>
+          <div class="product-qty-controls">
+            <button type="button" class="qty-btn" onclick="changeQty(this,-1)">−</button>
+            <span class="qty-val" data-unit="3111" data-max="482">1</span>
+            <button type="button" class="qty-btn" onclick="changeQty(this,1)">+</button>
+          </div>
+          <div class="product-limit-box">
+            <span class="product-limit-title">الحد:</span>
+            <span class="product-limit-num">482</span>
+          </div>
+        </div>
+        <div class="product-price-box">
+          <div class="product-price-top-row">
+            <span class="product-price-unit-title">سعر الوحدة (شامل الضريبة)</span>
+            <div class="product-price-unit-val">
+              <span class="price-num">3,111.00</span>
+              <span class="price-curr">ريال</span>
+            </div>
+          </div>
+          <div class="product-price-bottom-row">
+            <span class="product-price-total-title">الإجمالي المستحق</span>
+            <span class="product-price-total-val">3,111.00 ريال</span>
+          </div>
+        </div>
+        <div class="product-commission-badge">
+          <div class="commission-badge-right">
+            <i class="fa-solid fa-coins"></i>
+            <span>عمولة فورية (%7):</span>
+          </div>
+          <span class="commission-text">217.77 ريال</span>
+        </div>
+        <button type="button" class="btn-book-now" onclick="handleBookClick(this)">
+          <i class="fa-solid fa-cart-plus"></i>
+          <span>احجز الآن</span>
+        </button>
+      </div>
+
+    </div><!-- /products-grid -->
+
+    <!-- Trust Guarantee Pillars -->
+    <div class="booking-guarantee-row">
+      <div class="guarantee-card">
+        <div class="guarantee-icon-box">
+          <i class="fa-solid fa-shield-halved"></i>
+        </div>
+        <div>
+          <h4>ضمان رسمي سنتين</h4>
+          <p>أجهزة أصلية 100% بضمان معتمد بالمملكة</p>
+        </div>
+      </div>
+      <div class="guarantee-card">
+        <div class="guarantee-icon-box">
+          <i class="fa-solid fa-coins"></i>
+        </div>
+        <div>
+          <h4>عمولة فورية 7%</h4>
+          <p>تُضاف لمحفظتك مباشرة عند إتمام الحجز</p>
+        </div>
+      </div>
+      <div class="guarantee-card">
+        <div class="guarantee-icon-box">
+          <i class="fa-solid fa-truck-fast"></i>
+        </div>
+        <div>
+          <h4>شحن وتوصيل مؤمّن</h4>
+          <p>نقل آمن وسريع لكافة مناطق المملكة</p>
+        </div>
+      </div>
+      <div class="guarantee-card">
+        <div class="guarantee-icon-box">
+          <i class="fa-solid fa-file-signature"></i>
+        </div>
+        <div>
+          <h4>عقود رقمية موثقة</h4>
+          <p>توثيق نظامي رسمي فوري لحفظ الحقوق</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pagination under product cards -->
+    <div class="pagination-bar my-4">
+      <div class="pagination-buttons-wrap">
+        <a href="#" class="page-btn page-arrow" aria-label="الصفحة السابقة"><i class="fa-solid fa-chevron-left"></i></a>
+        <a href="#" class="page-btn">5</a>
+        <span class="page-btn" style="border:none; background:transparent; pointer-events:none; color:#94a3b8;">…</span>
+        <a href="#" class="page-btn">3</a>
+        <a href="#" class="page-btn">2</a>
+        <a href="#" class="page-btn active">1</a>
+      </div>
+      <span class="pagination-info">صفحة 1 من 5 &nbsp;·&nbsp; عرض 1-12 من 58 نتيجة</span>
+    </div>
+
+  </main>
+
+  <!-- Interactive Booking Confirmation Modal -->
+  <div class="modal fade" id="bookingConfirmModal" tabindex="-1" aria-labelledby="bookingConfirmModalLabel"
+    aria-hidden="true" dir="rtl">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content"
+        style="border-radius: 20px; border: 1px solid #e2e8f0; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.15);">
+        <div class="modal-header" style="background: #f8fafc; border-bottom: 1px solid #e2e8f0; padding: 18px 22px;">
+          <h5 class="modal-title d-flex align-items-center gap-2" id="bookingConfirmModalLabel"
+            style="font-size: 16px; font-weight: 700; color: #0f172a;">
+            <i class="fa-solid fa-circle-check text-primary"></i>
+            <span>تأكيد طلب الحجز</span>
+          </h5>
+          <button type="button" class="btn-close ms-0 me-auto" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+        </div>
+        <div class="modal-body" style="padding: 22px;">
+          <div class="d-flex align-items-center gap-3 mb-3 p-3"
+            style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 14px;">
+            <img id="modalProductImg" src="" alt="" style="width: 60px; height: 60px; object-fit: contain;">
+            <div>
+              <h6 id="modalProductName" style="font-weight: 700; color: #0f172a; margin-bottom: 4px; font-size: 14px;">
+              </h6>
+              <span id="modalProductSku" class="text-muted" style="font-size: 11px; font-family: monospace;"></span>
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-between py-2 border-bottom text-muted" style="font-size: 13px;">
+            <span>الكمية المطلوبة:</span>
+            <strong id="modalProductQty" class="text-dark"></strong>
+          </div>
+          <div class="d-flex justify-content-between py-2 border-bottom text-muted" style="font-size: 13px;">
+            <span>سعر الوحدة:</span>
+            <strong id="modalProductUnitPrice" class="text-dark"></strong>
+          </div>
+          <div class="d-flex justify-content-between py-2 border-bottom" style="font-size: 14px;">
+            <span style="font-weight: 600; color: #0f172a;">الإجمالي المستحق:</span>
+            <strong id="modalProductTotal" style="color: #0284c7; font-size: 16px;"></strong>
+          </div>
+          <div class="d-flex justify-content-between py-2 mt-2 p-2 rounded"
+            style="background: #f0fdf4; border: 1px solid #bbf7d0; font-size: 13.5px;">
+            <span style="font-weight: 700; color: #166534;"><i class="fa-solid fa-coins me-1 text-warning"></i> عمولتك
+              الفورية (7%):</span>
+            <strong id="modalProductCommission" style="color: #15803d; font-size: 15px;"></strong>
+          </div>
+        </div>
+        <div class="modal-footer" style="background: #f8fafc; border-top: 1px solid #e2e8f0; padding: 14px 22px;">
+          <button type="button" class="btn btn-light" data-bs-dismiss="modal"
+            style="border-radius: 10px; font-weight: 600; font-size: 13.5px;">إلغاء</button>
+          <a href="orders.html" class="btn btn-primary"
+            style="background: #0284c7; border-color: #0284c7; border-radius: 10px; font-weight: 700; font-size: 13.5px; padding: 8px 20px;">
+            <i class="fa-solid fa-check-circle me-1"></i>
+            <span>تأكيد الحجز والذهاب للطلبات</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fixed Mobile Bottom Navigation Bar -->
+  <div class="mobile-bottom-nav">
+    <a href="home.html" class="mobile-nav-item">
+      <div class="mobile-nav-icon-wrap">
+        <i class="fa-solid fa-house"></i>
+      </div>
+      <span>لوحتي</span>
+    </a>
+    <a href="booking.html" class="mobile-nav-item active">
+      <div class="mobile-nav-icon-wrap">
+        <i class="fa-solid fa-calendar-check"></i>
+        <span class="mobile-active-dot"></span>
+      </div>
+      <span>الحجز</span>
+    </a>
+    <a href="orders.html" class="mobile-nav-item mobile-nav-center">
+      <div class="mobile-nav-center-circle">
+        <i class="fa-solid fa-box"></i>
+      </div>
+      <span>طلباتي</span>
+    </a>
+    <a href="account.html" class="mobile-nav-item">
+      <div class="mobile-nav-icon-wrap">
+        <i class="fa-solid fa-wallet"></i>
+      </div>
+      <span>حسابي</span>
+    </a>
+    <a href="profile.html" class="mobile-nav-item">
+      <div class="mobile-nav-icon-wrap">
+        <i class="fa-solid fa-user"></i>
+      </div>
+      <span>ملفي</span>
+    </a>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="../js/script.js?v=2.6"></script>
+  <script>
+    // Quantity calculation
+    function changeQty(btn, delta) {
+      const box = btn.closest('.product-qty-box');
+      const valEl = box.querySelector('.qty-val');
+      const max = parseInt(valEl.dataset.max) || 999;
+      const unit = parseFloat(valEl.dataset.unit) || 0;
+      let qty = Math.min(max, Math.max(1, parseInt(valEl.textContent) + delta));
+      valEl.textContent = qty;
+      const card = btn.closest('.product-card');
+      const totalEl = card.querySelector('.product-price-total-val');
+      const commEl = card.querySelector('.commission-text');
+      const total = unit * qty;
+      const comm = total * 0.07;
+      if (totalEl) totalEl.textContent = total.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' ريال';
+      if (commEl) commEl.textContent = comm.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' ريال';
+    }
+
+    // Modal handler
+    function handleBookClick(btn) {
+      const card = btn.closest('.product-card');
+      const name = card.dataset.name;
+      const sku = card.dataset.sku;
+      const img = card.querySelector('.product-card-image img').getAttribute('src');
+      const qty = card.querySelector('.qty-val').textContent;
+      const unit = parseFloat(card.querySelector('.qty-val').dataset.unit).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' ريال';
+      const total = card.querySelector('.product-price-total-val').textContent;
+      const comm = card.querySelector('.commission-text').textContent;
+
+      document.getElementById('modalProductName').textContent = name;
+      document.getElementById('modalProductSku').textContent = 'SKU: ' + sku;
+      document.getElementById('modalProductImg').setAttribute('src', img);
+      document.getElementById('modalProductQty').textContent = qty + ' أجهزة';
+      document.getElementById('modalProductUnitPrice').textContent = unit;
+      document.getElementById('modalProductTotal').textContent = total;
+      document.getElementById('modalProductCommission').textContent = comm;
+
+      const modalEl = document.getElementById('bookingConfirmModal');
+      const modal = new bootstrap.Modal(modalEl);
+      modal.show();
+    }
+
+    // Interactive category filter & search
+    document.addEventListener('DOMContentLoaded', function () {
+      const filterChips = document.querySelectorAll('.filter-chip');
+      const searchInput = document.getElementById('bookingSearchInput');
+      const cards = document.querySelectorAll('.product-card');
+
+      let currentFilter = 'all';
+      let currentQuery = '';
+
+      function applyFilters() {
+        cards.forEach(card => {
+          const cat = card.dataset.category || '';
+          const name = (card.dataset.name || '').toLowerCase();
+          const sku = (card.dataset.sku || '').toLowerCase();
+
+          const matchesCat = (currentFilter === 'all') || cat.includes(currentFilter);
+          const matchesQuery = (!currentQuery) || name.includes(currentQuery) || sku.includes(currentQuery);
+
+          if (matchesCat && matchesQuery) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      }
+
+      filterChips.forEach(chip => {
+        chip.addEventListener('click', function () {
+          filterChips.forEach(c => c.classList.remove('active'));
+          this.classList.add('active');
+          currentFilter = this.dataset.filter;
+          applyFilters();
+        });
+      });
+
+      if (searchInput) {
+        searchInput.addEventListener('input', function () {
+          currentQuery = this.value.trim().toLowerCase();
+          applyFilters();
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>

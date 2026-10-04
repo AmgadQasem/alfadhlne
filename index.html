@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="js">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>الفضل للاتصالات | احجز جهازك واكسب عمولة 7% بعقد موثّق</title>
+
+  <!-- SEO & Open Graph Meta Tags -->
+  <meta name="description"
+    content="منصة الفضل للاتصالات - احجز أحدث أجهزة الآيفون واكسب عمولة ثابتة 7% بعقود رسمية وموثقة إلكترونياً من شركة فضل المتحدة." />
+  <meta name="keywords"
+    content="الفضل للاتصالات, حجز ايفون, عمولة 7%, عقود استثمارية, شركة فضل المتحدة, سجل تجاري 7017634457" />
+  <meta property="og:title" content="الفضل للاتصالات | احجز جهازك واكسب عمولة 7% بعقد موثّق" />
+  <meta property="og:description" content="احجز جهازك من أحدث أجهزة آيفون واكسب عمولة 7% بعقد موثّق إلكترونياً." />
+  <meta property="og:image" content="./src/image/logo.webp" />
+
+  <!-- Google Fonts: Readex Pro & IBM Plex Sans Arabic -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Readex+Pro:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome 6 Pro / Free CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Bootstrap 5.3.3 RTL CDN & Local Fallback -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" />
+  <link rel="stylesheet" href="./css/bootstrap.min.css" />
+
+  <!-- Dedicated Landing Page Design System (Light Mode) -->
+  <link rel="stylesheet" href="./css/landing.css" />
+</head>
+
+<body class="landing-page">
+
+  <!-- Scroll Progress Indicator Bar -->
+  <div class="lp-progress" id="lpProgress"></div>
+
+  <!-- SVG Gradient Definitions -->
+  <svg width="0" height="0" class="position-absolute">
+    <defs>
+      <linearGradient id="lpUnderline" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#0284c7" />
+        <stop offset="100%" stop-color="#0c4a6e" />
+      </linearGradient>
+    </defs>
+  </svg>
+
+
+  <!-- ==========================================================================
+     Navbar (Full Width Header - 100% Edge to Edge)
+     ========================================================================== -->
+  <header class="lp-nav" id="lpNav">
+    <div class="lp-nav-inner d-flex align-items-center justify-content-between px-3 px-md-5">
+
+      <!-- Logo & Brand Title -->
+      <a href="index.html" class="d-flex align-items-center gap-2 text-decoration-none">
+        <img src="./src/image/logo.webp" alt="الفضل للاتصالات" class="lp-logo" />
+        <div class="d-flex flex-column text-start">
+          <span class="fw-bold text-dark fs-6 lh-1 lp-brand-title">الفضل للاتصالات</span>
+          <span class="text-muted d-none d-sm-block" style="font-size: 10px; margin-top: 2px;">شركة فضل المتحدة</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links (No Underline) -->
+      <nav class="d-none d-lg-flex align-items-center gap-1">
+        <a href="#hero" class="lp-nav-link active">الرئيسية</a>
+        <a href="#how-it-works" class="lp-nav-link">كيف تعمل</a>
+        <a href="#features" class="lp-nav-link">المميزات</a>
+        <a href="#security" class="lp-nav-link">الأمان والتوثيق</a>
+        <a href="#reviews" class="lp-nav-link">آراء العملاء</a>
+        <a href="#faq" class="lp-nav-link">الأسئلة الشائعة</a>
+      </nav>
+
+      <!-- Right CTA & Mobile Drawer Button -->
+      <div class="d-flex align-items-center gap-2">
+        <a href="pages/signin.html" class="lp-btn lp-btn-ghost px-3 py-1.5 fs-7 d-none d-sm-inline-flex">
+          <i class="fa-solid fa-right-to-bracket text-primary"></i>
+          <span>تسجيل الدخول</span>
+        </a>
+        <a href="pages/signup.html" class="lp-btn lp-btn-primary px-3 py-1.5 fs-7 d-none d-md-inline-flex">
+          <span>ابدأ الآن</span>
+          <i class="fa-solid fa-arrow-left"></i>
+        </a>
+
+        <!-- Mobile Hamburger Trigger -->
+        <button class="btn lp-hamburger-btn d-lg-none" type="button"
+          data-bs-toggle="offcanvas" data-bs-target="#lpMobileDrawer" aria-controls="lpMobileDrawer"
+          aria-label="فتح القائمة">
+          <i class="fa-solid fa-bars fs-6"></i>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Offcanvas Menu (Light Mode - Clean & Structured) -->
+  <div class="offcanvas offcanvas-start border-0 shadow-lg" tabindex="-1" id="lpMobileDrawer" aria-labelledby="lpDrawerLabel" style="background: #ffffff !important;">
+    <div class="offcanvas-header border-bottom">
+      <div class="d-flex align-items-center gap-2.5" id="lpDrawerLabel">
+        <img src="./src/image/logo.webp" alt="الفضل للاتصالات" style="width: 34px; height: 34px; object-fit: contain;" />
+        <div class="d-flex flex-column text-start">
+          <span class="fw-bold text-dark fs-6 lh-1">الفضل للاتصالات</span>
+          <span class="text-muted" style="font-size: 10px; margin-top: 2px;">شركة فضل المتحدة</span>
+        </div>
+      </div>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="إغلاق"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column justify-content-between">
+      <div class="vstack gap-1">
+        <a href="#hero" class="drawer-nav-item active" data-bs-dismiss="offcanvas">
+          <i class="fa-solid fa-house text-primary"></i>
+          <span>الرئيسية</span>
+        </a>
+        <a href="#how-it-works" class="drawer-nav-item" data-bs-dismiss="offcanvas">
+          <i class="fa-solid fa-circle-play text-muted"></i>
+          <span>كيف تعمل</span>
+        </a>
+        <a href="#features" class="drawer-nav-item" data-bs-dismiss="offcanvas">
+          <i class="fa-solid fa-star text-muted"></i>
+          <span>المميزات</span>
+        </a>
+        <a href="#security" class="drawer-nav-item" data-bs-dismiss="offcanvas">
+          <i class="fa-solid fa-shield-halved text-muted"></i>
+          <span>الأمان والتوثيق</span>
+        </a>
+        <a href="#reviews" class="drawer-nav-item" data-bs-dismiss="offcanvas">
+          <i class="fa-solid fa-comments text-muted"></i>
+          <span>آراء العملاء</span>
+        </a>
+        <a href="#faq" class="drawer-nav-item" data-bs-dismiss="offcanvas">
+          <i class="fa-solid fa-circle-question text-muted"></i>
+          <span>الأسئلة الشائعة</span>
+        </a>
+      </div>
+      <div class="vstack gap-2.5 pt-4 border-top">
+        <a href="pages/signup.html" class="btn btn-primary w-100 py-2.5 rounded-3 fw-bold fs-6 text-white d-flex align-items-center justify-content-center gap-2 shadow-sm" style="background: #0284c7; border: none;">
+          <span>إنشاء حساب جديد</span>
+          <i class="fa-solid fa-user-plus"></i>
+        </a>
+        <a href="pages/signin.html" class="btn btn-light w-100 py-2.5 rounded-3 fw-bold fs-6 text-dark d-flex align-items-center justify-content-center gap-2 border" style="border-color: #cbd5e1 !important; background: #f8fafc;">
+          <span>تسجيل الدخول</span>
+          <i class="fa-solid fa-right-to-bracket text-primary"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ==========================================================================
+     Hero Section (Compact Sizing · Sky/Navy Dashboard Palette)
+     ========================================================================== -->
+  <section class="lp-hero" id="hero">
+    <div class="lp-grid-bg"></div>
+    <div class="lp-blob lp-blob-sky"></div>
+    <div class="lp-blob lp-blob-emerald"></div>
+    <div class="lp-blob lp-blob-indigo"></div>
+
+    <div class="container position-relative" style="z-index: 2;">
+      <div class="row align-items-center g-4">
+
+        <!-- Right Side: Headlines & CTA -->
+        <div class="col-12 col-lg-7">
+
+          <!-- Trust Badge -->
+          <div class="lp-pulse-badge mb-3 reveal">
+            <span class="lp-pulse-dot"></span>
+            <span>منصة سعودية موثّقة ومؤرخصة</span>
+          </div>
+
+          <!-- Main Title -->
+          <h1 class="lp-hero-title mb-3 reveal" style="--d: 0.1s;">
+            احجز جهازك <br>
+            <span class="lp-highlight">
+              <span class="lp-gradient-text" style="color: #0284c7 !important;">واكسب عمولة 7%</span>
+            </span> <br>
+            بعقد موثّق
+          </h1>
+
+          <!-- Lead Paragraph -->
+          <p class="lp-hero-lead mb-4 reveal" style="--d: 0.2s;">
+            الفضل للاتصالات تبيع جهازك الإلكتروني نيابةً عنك، وتستعيد إليك رأس مالك كاملاً مع عمولة 7% خلال من 50 إلى 60 يوماً. العملية بالكامل رقمية وموثقة وشفافة.
+          </p>
+
+          <!-- CTAs & Social Proof Wrapper -->
+          <div class="lp-hero-ctas-wrap d-flex flex-column align-items-center align-items-lg-start gap-3 mb-4 reveal" style="--d: 0.3s;">
+            <div class="lp-hero-buttons-grid d-flex align-items-center justify-content-center justify-content-lg-start gap-3 w-100 mb-2">
+              <a href="pages/signup.html" class="lp-hero-btn lp-hero-btn-primary">
+                <span>ابدأ الآن مجاناً</span>
+                <i class="fa-solid fa-rocket ms-1"></i>
+              </a>
+              <a href="#how-it-works" class="lp-hero-btn lp-hero-btn-ghost">
+                <i class="fa-solid fa-circle-play me-1"></i>
+                <span>كيف تعمل؟</span>
+              </a>
+            </div>
+
+            <!-- Customer Avatar Stack (Social Proof - Centered) -->
+            <div class="d-flex align-items-center justify-content-center gap-2 mt-1 w-100">
+              <div class="lp-avatars">
+                <span class="lp-grad-sky">ع</span>
+                <span class="lp-grad-sky">ف</span>
+                <span class="lp-grad-violet">م</span>
+                <span class="lp-grad-amber">س</span>
+              </div>
+              <div class="d-flex flex-column text-start">
+                <div class="d-flex align-items-center gap-1 text-warning fs-7">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                  <span class="fw-bold text-dark ms-1">4.9</span>
+                </div>
+                <span class="text-muted" style="font-size: 11.5px;">أكثر من +1,500 مستثمر</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4 Dashboard Stat KPIs -->
+          <div class="lp-kpis reveal" style="--d: 0.4s;">
+            <div class="row g-0 justify-content-center text-center">
+              <div class="col-6 col-md-3 lp-kpi">
+                <div class="lp-kpi-value text-primary">7%</div>
+                <div class="lp-kpi-label">عمولة</div>
+              </div>
+              <div class="col-6 col-md-3 lp-kpi">
+                <div class="lp-kpi-value">50-60</div>
+                <div class="lp-kpi-label">يوم للبيع</div>
+              </div>
+              <div class="col-6 col-md-3 lp-kpi">
+                <div class="lp-kpi-value text-primary">100%</div>
+                <div class="lp-kpi-label">استرداد رأس المال</div>
+              </div>
+              <div class="col-6 col-md-3 lp-kpi">
+                <div class="lp-kpi-value">SSL</div>
+                <div class="lp-kpi-label">مشفر وآمن</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Left Side: Replica Dashboard Mockup Card -->
+        <div class="col-12 col-lg-5 reveal" style="--d: 0.25s;">
+          <div class="lp-dash-hero-wrapper position-relative">
+
+            <!-- Dashboard Replica Mockup Card (Light Mode) -->
+            <div class="lp-dash-mockup-card p-4 rounded-4 position-relative text-start" dir="rtl" style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 24px; box-shadow: 0 12px 32px rgba(15, 23, 42, 0.08); max-width: 380px; margin-inline: auto;">
+              
+              <!-- Header: Al-Fadhel Telecom logo + Subtitle -->
+              <div class="d-flex align-items-center justify-content-between pb-3 mb-3 border-bottom" style="border-color: #f1f5f9 !important;">
+                <div class="d-flex align-items-center gap-2.5">
+                  <div class="p-2 rounded-3" style="width: 44px; height: 44px; background: #f0f9ff; border: 1px solid #bae6fd; display: flex; align-items: center; justify-content: center;">
+                    <img src="./src/image/logo.webp" alt="الفضل للاتصالات" style="max-width: 100%; max-height: 100%; object-fit: contain;" />
+                  </div>
+                  <div class="d-flex flex-column text-start">
+                    <span class="fw-bold fs-5 lh-sm" style="color: #0f172a;">الفضل للاتصالات</span>
+                    <span class="small fw-medium" style="font-size: 11.5px; color: #64748b;">لوحة التحكم</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Row 1: iPhone 17 Pro Max 📱 | 6,324 ر.س (No box around price) -->
+              <div class="d-flex align-items-center justify-content-between py-3 border-bottom" style="border-color: #f1f5f9 !important;">
+                <div class="d-flex align-items-center gap-2 fs-6" style="color: #0f172a;">
+                  <span class="fs-5 text-muted"><i class="fa-solid fa-mobile-screen-button"></i></span>
+                  <span class="fw-bold">iPhone 17 Pro Max</span>
+                </div>
+                <div class="fw-bold fs-6" style="color: #0f172a;">
+                  <span>6,324</span> <small class="text-muted">ر.س</small>
+                </div>
+              </div>
+
+              <!-- Row 2: حالة العقد 📄 | موقع ✅ -->
+              <div class="d-flex align-items-center justify-content-between py-3 border-bottom" style="border-color: #f1f5f9 !important;">
+                <div class="d-flex align-items-center gap-2 text-muted fs-6">
+                  <span class="fs-5 text-muted"><i class="fa-solid fa-file-contract"></i></span>
+                  <span>حالة العقد</span>
+                </div>
+                <div class="d-flex align-items-center gap-1.5 text-success fw-bold fs-6">
+                  <span>موقع</span>
+                  <i class="fa-solid fa-circle-check text-success"></i>
+                </div>
+              </div>
+
+              <!-- Row 3: العمولة 💰 | + 494.91 ر.س -->
+              <div class="d-flex align-items-center justify-content-between py-3 border-bottom" style="border-color: #f1f5f9 !important;">
+                <div class="d-flex align-items-center gap-2 text-muted fs-6">
+                  <span class="fs-5 text-muted"><i class="fa-solid fa-hand-holding-dollar"></i></span>
+                  <span>العمولة</span>
+                </div>
+                <div class="fw-extrabold fs-6" style="color: #0284c7;">
+                  + 494.91 <small class="fs-7" style="color: #0284c7;">ر.س</small>
+                </div>
+              </div>
+
+              <!-- Row 4: المُسترد 📅 | 5,993.91 ر.س -->
+              <div class="d-flex align-items-center justify-content-between py-3 mb-3">
+                <div class="d-flex align-items-center gap-2 text-muted fs-6">
+                  <span class="fs-5 text-muted"><i class="fa-solid fa-calendar-check"></i></span>
+                  <span>المُسترد</span>
+                </div>
+                <div class="fw-extrabold fs-6" style="color: #0f172a;">
+                  5,993.91 <small class="fs-7 text-muted">ر.س</small>
+                </div>
+              </div>
+
+              <!-- Button: طلب السحب (Primary Site Blue Color #0284c7) -->
+              <a href="pages/signup.html" class="btn w-100 py-3 rounded-4 fw-bold fs-5 text-white d-flex align-items-center justify-content-center gap-2 text-decoration-none shadow-sm" style="background: #0284c7; border: none; box-shadow: 0 8px 20px rgba(2, 132, 199, 0.35);">
+                <span>طلب السحب</span>
+                <i class="fa-solid fa-money-bill-wave fs-5"></i>
+              </a>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+     Trust Infinite Marquee Bar
+     ========================================================================== -->
+  <div class="lp-marquee">
+    <div class="lp-marquee-track">
+      <div class="lp-marquee-item"><i class="fa-solid fa-bolt"></i><span>تنفيذ فوري لطلب الحجز</span></div>
+      <div class="lp-marquee-item"><i class="fa-solid fa-file-contract"></i><span>عقود موثقة بختم الشركة الرسمية</span>
+      </div>
+      <div class="lp-marquee-item"><i class="fa-solid fa-shield-halved"></i><span>ضمان كامل لرأس المال المستثمر</span>
+      </div>
+      <div class="lp-marquee-item"><i class="fa-solid fa-building-columns"></i><span>تحويلات بنكية رسمية باسم
+          الشركة</span></div>
+      <div class="lp-marquee-item"><i class="fa-solid fa-lock"></i><span>تشفير بيانات عالي الأمان SSL</span></div>
+      <div class="lp-marquee-item"><i class="fa-solid fa-headset"></i><span>دعم فني متخصص على مدار الساعة</span></div>
+
+      <!-- Duplicated for seamless infinite loop -->
+      <div class="lp-marquee-item"><i class="fa-solid fa-bolt"></i><span>تنفيذ فوري لطلب الحجز</span></div>
+      <div class="lp-marquee-item"><i class="fa-solid fa-file-contract"></i><span>عقود موثقة بختم الشركة الرسمية</span>
+      </div>
+      <div class="lp-marquee-item"><i class="fa-solid fa-shield-halved"></i><span>ضمان كامل لرأس المال المستثمر</span>
+      </div>
+      <div class="lp-marquee-item"><i class="fa-solid fa-building-columns"></i><span>تحويلات بنكية رسمية باسم
+          الشركة</span></div>
+      <div class="lp-marquee-item"><i class="fa-solid fa-lock"></i><span>تشفير بيانات عالي الأمان SSL</span></div>
+      <div class="lp-marquee-item"><i class="fa-solid fa-headset"></i><span>دعم فني متخصص على مدار الساعة</span></div>
+    </div>
+  </div>
+
+
+  <!-- ==========================================================================
+     Section 1: How It Works (4 Steps Interactive Timeline)
+     ========================================================================== -->
+  <section class="lp-section lp-section-surface" id="how-it-works">
+    <div class="container">
+
+      <!-- Section Header -->
+      <div class="text-center mb-4 reveal">
+        <span class="lp-eyebrow mb-2">
+          <i class="fa-solid fa-route me-1"></i> آلية العمل
+        </span>
+        <h2 class="lp-title mb-2">4 خطوات وتنتهي العملية</h2>
+        <p class="lp-subtitle mx-auto">من تسجيل حسابك حتى استلام أرباحك بوضوح وأمان تام دون أي تعقيدات.</p>
+      </div>
+
+      <!-- Timeline Grid with Connecting Line -->
+      <div class="lp-steps position-relative">
+        <div class="lp-steps-line d-none d-lg-block"><span></span></div>
+
+        <div class="row g-4">
+
+          <!-- Step 1 -->
+          <div class="col-12 col-md-6 col-lg-3 reveal" style="--d: 0.1s;">
+            <div class="lp-step">
+              <div class="lp-step-icon">
+                <span class="lp-step-num">1</span>
+                <i class="fa-solid fa-user-plus"></i>
+              </div>
+              <div class="lp-step-card">
+                <h3 class="fs-6 fw-bold text-dark mb-2">أنشئ حسابك وتأكد</h3>
+                <p class="text-muted small lh-lg m-0">سجّل في دقائق معدودة، وقم بتأكيد رقم جوالك والبريد الإلكتروني
+                  للبدء فوراً.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="col-12 col-md-6 col-lg-3 reveal" style="--d: 0.2s;">
+            <div class="lp-step">
+              <div class="lp-step-icon">
+                <span class="lp-step-num">2</span>
+                <i class="fa-solid fa-mobile-screen-button"></i>
+              </div>
+              <div class="lp-step-card">
+                <h3 class="fs-6 fw-bold text-dark mb-2">اختر جهازك واحجز</h3>
+                <p class="text-muted small lh-lg m-0">حدد الأجهزة المتاحة والكميات المطلوبة واستعرض الأرباح المتوقعة بكل
+                  شفافية.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="col-12 col-md-6 col-lg-3 reveal" style="--d: 0.3s;">
+            <div class="lp-step">
+              <div class="lp-step-icon">
+                <span class="lp-step-num">3</span>
+                <i class="fa-solid fa-file-signature"></i>
+              </div>
+              <div class="lp-step-card">
+                <h3 class="fs-6 fw-bold text-dark mb-2">وقّع عقدك الإلكتروني</h3>
+                <p class="text-muted small lh-lg m-0">احصل على عقد استثماري رسمي ومختوم إلكترونياً باسم الشركة لحماية
+                  حقوقك.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="col-12 col-md-6 col-lg-3 reveal" style="--d: 0.4s;">
+            <div class="lp-step">
+              <div class="lp-step-icon">
+                <span class="lp-step-num">4</span>
+                <i class="fa-solid fa-wallet"></i>
+              </div>
+              <div class="lp-step-card">
+                <h3 class="fs-6 fw-bold text-dark mb-2">استلم أرباحك ورأس مالك</h3>
+                <p class="text-muted small lh-lg m-0">عند اكتمال دورة العقد، تُحول مبالغك وأرباحك مباشرة إلى حسابك
+                  البنكي.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+     Section 2: Why Choose Us (Bento Features Grid)
+     ========================================================================== -->
+  <section class="lp-section" id="features">
+    <div class="container">
+
+      <!-- Section Header -->
+      <div class="text-center mb-4 reveal">
+        <span class="lp-eyebrow mb-2">
+          <i class="fa-solid fa-star me-1"></i> لماذا نتميز؟
+        </span>
+        <h2 class="lp-title mb-2">لماذا الفضل للاتصالات؟</h2>
+        <p class="lp-subtitle mx-auto">نوفر لك تجربة استثمارية وتجارية موثوقة تجمع بين التقنية العالية والأمان التام.
+        </p>
+      </div>
+
+      <!-- Bento Layout Grid -->
+      <div class="row g-3">
+
+        <!-- Bento Card 1: Featured 7% Navy Hero Bento -->
+        <div class="col-12 col-lg-8 reveal" style="--d: 0.1s;">
+          <div class="lp-bento lp-bento-navy d-flex flex-column justify-content-between h-100">
+            <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-3">
+              <div>
+                <span class="lp-glass-chip mb-2"><i class="fa-solid fa-certificate text-info"></i> عائد استثماري
+                  ثابت</span>
+                <h3 class="fs-3 fw-bold text-white mb-2">عمولة مجزية 7% بعقد رسمي</h3>
+                <p class="text-white-50 small m-0" style="max-width: 440px;">عائد عالي ومحدد ومثبت في بنود العقد الرسمي
+                  باسم شركة فضل المتحدة بدون أي متطلبات خفية.</p>
+              </div>
+              <div class="lp-big-percent lp-num">7%</div>
+            </div>
+
+            <!-- Animated Bar Chart Mockup -->
+            <div class="lp-bars mt-2">
+              <span style="height: 35%;"></span>
+              <span style="height: 50%;"></span>
+              <span style="height: 65%;"></span>
+              <span style="height: 80%;"></span>
+              <span style="height: 90%;"></span>
+              <span style="height: 100%;"></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bento Card 2: Devices Showcase Fan -->
+        <div class="col-12 col-md-6 col-lg-4 reveal" style="--d: 0.2s;">
+          <div class="lp-bento d-flex flex-column justify-content-between">
+            <div>
+              <div class="lp-feature-icon lp-tone-sky"><i class="fa-solid fa-mobile-screen-button"></i></div>
+              <h3 class="fs-6 fw-bold text-dark mb-2">أحدث أجهزة الآيفون</h3>
+              <p class="text-muted small m-0">أجهزة أصلية ومضمونة ومطلوبة في السوق بأعلى معايير الجودة.</p>
+            </div>
+            <div class="lp-phones mt-3">
+              <div class="lp-phone-tile"><img src="./src/image/product_1 (1).webp" alt="iPhone 1" /></div>
+              <div class="lp-phone-tile"><img src="./src/image/product_1 (2).webp" alt="iPhone 2" /></div>
+              <div class="lp-phone-tile"><img src="./src/image/product_1 (3).webp" alt="iPhone 3" /></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bento Card 3: Rapid Digital Contract Signing -->
+        <div class="col-12 col-md-6 col-lg-4 reveal" style="--d: 0.3s;">
+          <div class="lp-bento d-flex flex-column justify-content-between h-100">
+            <div>
+              <div class="lp-feature-icon lp-tone-sky"><i class="fa-solid fa-file-signature"></i></div>
+              <h3 class="fs-6 fw-bold text-dark mb-2">سرعة وسلاسة التوثيق</h3>
+              <p class="text-muted small mb-3">توقيع وإصدار العقود الرسمية إلكترونياً خلال ثوانٍ وبمنتهى السهولة.</p>
+            </div>
+            <div class="lp-mock p-2.5 mt-2">
+              <div class="d-flex align-items-center justify-content-between">
+                <span class="lp-code">CNT-20260928</span>
+                <span class="lp-status lp-status-done p-2"><i class="fa-solid fa-circle-check me-1"></i> موقّع ومختوم</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bento Card 4: Dashboard Tracking Mockup -->
+        <div class="col-12 col-md-6 col-lg-4 reveal" style="--d: 0.4s;">
+          <div class="lp-bento d-flex flex-column justify-content-between h-100">
+            <div>
+              <div class="lp-feature-icon lp-tone-amber"><i class="fa-solid fa-sliders"></i></div>
+              <h3 class="fs-6 fw-bold text-dark mb-2">لوحة تحكم احترافية</h3>
+              <p class="text-muted small mb-3">تتبع طلباتك، عقودك، وأرباحك وحالات التسوية لحظة بلحظة وبكل دقة.</p>
+            </div>
+            <div class="lp-mock p-2.5 mt-2">
+              <div class="d-flex align-items-center justify-content-between">
+                <span class="lp-code">ALF-20260928</span>
+                <span class="lp-status lp-status-active p-2"><i class="fa-solid fa-chart-line me-1"></i> تتبع نشط</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bento Card 5: Dedicated 24/7 Support -->
+        <div class="col-12 col-md-6 col-lg-4 reveal" style="--d: 0.5s;">
+          <div class="lp-bento d-flex flex-column justify-content-between h-100">
+            <div>
+              <div class="lp-feature-icon lp-tone-violet"><i class="fa-solid fa-headset"></i></div>
+              <h3 class="fs-6 fw-bold text-dark mb-2">دعم فني متواصل 24/7</h3>
+              <p class="text-muted small mb-3">فريق دعم متخصص لخدمتك ومساعدتك في جميع استفساراتك على مدار الساعة.</p>
+            </div>
+            <div class="lp-mock p-2.5 mt-2">
+              <div class="d-flex align-items-center justify-content-between">
+                <span class="text-dark fw-semibold fs-7 p-2"><i class="fa-solid fa-comments text-primary me-1"></i> خدمة
+                  متواصلة</span>
+                <span class="lp-status lp-status-active">24/7</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+     Section 3: Security & Official Commercial Registration
+     ========================================================================== -->
+  <section class="lp-section lp-section-surface" id="security">
+    <div class="container">
+
+      <!-- Section Header -->
+      <div class="text-center mb-4 reveal">
+        <span class="lp-eyebrow mb-2">
+          <i class="fa-solid fa-lock me-1"></i> أعلى معايير الأمان
+        </span>
+        <h2 class="lp-title mb-2">منصة آمنة ومُشفرة بالكامل</h2>
+        <p class="lp-subtitle mx-auto">بياناتك وأموالك في أيدٍ أمينة — نطبّق أعلى معايير الحماية في كل عملية.</p>
+      </div>
+
+      <!-- 4 Security Cards -->
+      <div class="row g-3 mb-4">
+
+        <div class="col-12 col-sm-6 col-lg-3 reveal" style="--d: 0.1s;">
+          <div class="lp-security-tile">
+            <div class="lp-security-icon lp-tone-sky"><i class="fa-solid fa-shield-cat"></i></div>
+            <h3 class="fs-6 fw-bold text-dark mb-2">تشفير SSL</h3>
+            <p class="text-muted small m-0">كل البيانات المتبادلة مشفّرة من طرف إلى طرف لحماية معلوماتك.</p>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-3 reveal" style="--d: 0.2s;">
+          <div class="lp-security-tile">
+            <div class="lp-security-icon lp-tone-sky"><i class="fa-solid fa-mobile-retro"></i></div>
+            <h3 class="fs-6 fw-bold text-dark mb-2">تحقق ثنائي OTP</h3>
+            <p class="text-muted small m-0">رمز تحقق لجوالك عند التسجيل واستعادة الحساب لمنع الوصول غير المصرح.</p>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-3 reveal" style="--d: 0.3s;">
+          <div class="lp-security-tile">
+            <div class="lp-security-icon lp-tone-amber"><i class="fa-solid fa-receipt"></i></div>
+            <h3 class="fs-6 fw-bold text-dark mb-2">إيصالات موثّقة</h3>
+            <p class="text-muted small m-0">مراجعة كل إيصال تحويل بنكي بدقة قبل اعتماد الطلب وإصدار العقد.</p>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-3 reveal" style="--d: 0.4s;">
+          <div class="lp-security-tile">
+            <div class="lp-security-icon lp-tone-violet"><i class="fa-solid fa-user-shield"></i></div>
+            <h3 class="fs-6 fw-bold text-dark mb-2">خصوصية تامة</h3>
+            <p class="text-muted small m-0">لا نشارك بياناتك الشخصية أو المالية مع أي طرف ثالث إطلاقاً.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Official CR Banner -->
+      <div class="lp-cr-banner reveal" style="--d: 0.2s;">
+        <div class="row align-items-center g-4">
+          <div class="col-12 col-lg-8">
+            <div class="d-flex align-items-start gap-3">
+              <div class="lp-cr-icon"><i class="fa-solid fa-building-shield"></i></div>
+              <div>
+                <h3 class="fs-5 fw-bold mb-2">شركة فضل المتحدة — كيان تجاري مسجّل رسمياً</h3>
+                <p class="text-white-50 small m-0 lh-lg" style="max-width: 620px;">
+                  منصة الفضل للاتصالات تُدار من قبل شركة فضل المتحدة المسجّلة في المملكة العربية السعودية بالسجل التجاري
+                  رقم <strong class="text-white lp-num">7017634457</strong>، وجميع العقود تُبرم باسم الشركة وتخضع
+                  للأنظمة المحلية المعمول بها.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="d-flex flex-wrap gap-2 justify-content-lg-end">
+              <span class="lp-glass-chip"><i class="fa-solid fa-id-card text-info"></i> س.ت 7017634457</span>
+              <span class="lp-glass-chip"><i class="fa-solid fa-location-dot text-info"></i> المملكة العربية
+                السعودية</span>
+              <span class="lp-glass-chip"><i class="fa-solid fa-scale-balanced text-warning"></i> عقود قانونية
+                معتمدة</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+     Section 4: Testimonials (آراء العملاء)
+     ========================================================================== -->
+  <section class="lp-section" id="reviews">
+    <div class="container">
+
+      <!-- Section Header -->
+      <div class="text-center mb-4 reveal">
+        <span class="lp-eyebrow mb-2">
+          <i class="fa-solid fa-comments me-1"></i> آراء العملاء
+        </span>
+        <h2 class="lp-title mb-2">ماذا يقول عملاؤنا؟</h2>
+
+        <!-- Rating Pill -->
+        <div class="lp-rating mt-2">
+          <span class="lp-rating-score lp-num">4.9</span>
+          <div>
+            <div class="text-warning fs-7">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <span class="text-muted" style="font-size: 11px;">أكثر من +1,500 عميل موثّق</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 Testimonial Cards -->
+      <div class="row g-4 align-items-stretch">
+
+        <div class="col-12 col-md-6 col-lg-4 reveal" style="--d: 0.1s;">
+          <div class="lp-review d-flex flex-column justify-content-between">
+            <span class="lp-review-quote">“</span>
+            <div>
+              <div class="text-warning fs-7 mb-2">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                  class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <p class="text-dark small lh-lg mb-3">"منصة احترافية بكل ما تعنيه الكلمة. العقد موثق والأرباح وصلت حسابي
+                البنكي في الوقت المحدد بالضبط بدون أي تأخير."</p>
+            </div>
+            <div class="d-flex align-items-center gap-2.5">
+              <div class="lp-avatar lp-grad-sky">ع</div>
+              <div>
+                <div class="fw-bold text-dark fs-7">عبدالرحمن العتيبي</div>
+                <div class="text-primary fs-7"><i class="fa-solid fa-circle-check me-1"></i> عميل موثّق</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 reveal" style="--d: 0.2s;">
+          <div class="lp-review lp-review-featured d-flex flex-column justify-content-between">
+            <span class="lp-review-quote">“</span>
+            <div>
+              <div class="text-warning fs-7 mb-2">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                  class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <p class="text-dark small lh-lg mb-3">"وضوح التوثيق ووجود ختم وتوقيع باسم شركة فضل المتحدة أعطاني راحة بال
+                كاملة. تجربة ممتازة وسأكررها بالتأكيد."</p>
+            </div>
+            <div class="d-flex align-items-center gap-2.5">
+              <div class="lp-avatar lp-grad-sky">ف</div>
+              <div>
+                <div class="fw-bold text-dark fs-7">فيصل المطيري</div>
+                <div class="text-primary fs-7"><i class="fa-solid fa-circle-check me-1"></i> عميل موثّق</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 reveal" style="--d: 0.3s;">
+          <div class="lp-review d-flex flex-column justify-content-between">
+            <span class="lp-review-quote">“</span>
+            <div>
+              <div class="text-warning fs-7 mb-2">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                  class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <p class="text-dark small lh-lg mb-3">"لوحة التحكم واضحة جداً وسهلة، تابعت طلبي من لحظة الحجز وحتى استلام
+                رأس المال والعمولة الـ 7%."</p>
+            </div>
+            <div class="d-flex align-items-center gap-2.5">
+              <div class="lp-avatar lp-grad-violet">م</div>
+              <div>
+                <div class="fw-bold text-dark fs-7">محمد الشمري</div>
+                <div class="text-primary fs-7"><i class="fa-solid fa-circle-check me-1"></i> عميل موثّق</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+     Section 5: FAQ Accordion (الأسئلة الشائعة)
+     ========================================================================== -->
+  <section class="lp-section lp-section-surface" id="faq">
+    <div class="container">
+      <div class="row g-4">
+
+        <!-- Left Side Sticky Info Card -->
+        <div class="col-12 col-lg-4">
+          <div class="lp-faq-side reveal">
+            <span class="lp-eyebrow mb-2">
+              <i class="fa-solid fa-circle-question me-1"></i> الأسئلة الشائعة
+            </span>
+            <h2 class="lp-title mb-2">أسئلة يسألها العملاء</h2>
+            <p class="lp-subtitle mb-3">إليك إجابات لأبرز الأسئلة المتعلقة بآلية العمل، التوثيق، واستلام المستحقات.</p>
+
+            <div class="lp-contact-card">
+              <div class="fw-bold text-dark fs-6 mb-2">لديك سؤال آخر؟</div>
+              <div class="vstack gap-2.5 mb-3">
+                <div class="lp-contact-row">
+                  <i class="fa-solid fa-phone text-primary bg-primary-subtle"></i>
+                  <span>الرقم الموحد: 920000000</span>
+                </div>
+                <div class="lp-contact-row">
+                  <i class="fa-solid fa-envelope text-primary bg-primary-subtle"></i>
+                  <span>support@alfadhl.com</span>
+                </div>
+              </div>
+              <a href="pages/signup.html" class="lp-btn lp-btn-primary w-100 py-2 fs-7">
+                <span>تواصل مع الدعم الفني</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side Accordion -->
+        <div class="col-12 col-lg-8 reveal" style="--d: 0.2s;">
+          <div class="accordion lp-faq" id="lpFaqAccordion">
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faqH1">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqC1"
+                  aria-expanded="true" aria-controls="faqC1">
+                  <span class="lp-faq-num">01</span>
+                  <span>هل رأس المال مضمون؟</span>
+                  <span class="lp-faq-toggle"><i class="fa-solid fa-plus"></i></span>
+                </button>
+              </h2>
+              <div id="faqC1" class="accordion-collapse collapse show" aria-labelledby="faqH1"
+                data-bs-parent="#lpFaqAccordion">
+                <div class="accordion-body">
+                  نعم، رأس المال مضمون بموجب عقد رسمي موقّع ومختوم إلكترونياً من شركة فضل المتحدة المسجّلة بالسجل
+                  التجاري رقم 7017634457، والذي يلتزم بإعادة كافة المبالغ المستحقة في تاريخ التسوية المعتمد.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faqH2">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faqC2" aria-expanded="false" aria-controls="faqC2">
+                  <span class="lp-faq-num">02</span>
+                  <span>كيف يتم حساب وتوزيع العمولة 7%؟</span>
+                  <span class="lp-faq-toggle"><i class="fa-solid fa-plus"></i></span>
+                </button>
+              </h2>
+              <div id="faqC2" class="accordion-collapse collapse" aria-labelledby="faqH2"
+                data-bs-parent="#lpFaqAccordion">
+                <div class="accordion-body">
+                  تُحسب العمولة بنسبة ثابتة قدرها 7% من إجمالي قيمة الأجهزة المحجوزة، وتُضاف تلقائياً إلى حسابك وتكون
+                  مستحقة الصرف كاملة مع رأس المال عند انتهاء دورة العقد.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faqH3">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faqC3" aria-expanded="false" aria-controls="faqC3">
+                  <span class="lp-faq-num">03</span>
+                  <span>ما هي مدة دورة العقد؟</span>
+                  <span class="lp-faq-toggle"><i class="fa-solid fa-plus"></i></span>
+                </button>
+              </h2>
+              <div id="faqC3" class="accordion-collapse collapse" aria-labelledby="faqH3"
+                data-bs-parent="#lpFaqAccordion">
+                <div class="accordion-body">
+                  تستغرق دورة العقد عادةً 60 يوماً من تاريخ اعتماد الطلب والتحويل، ويمكنك متابعة العداد التنازلي وتفاصيل
+                  تاريخ الانتهاء والتسوية من لوحة تحكمك فوراً.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faqH4">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faqC4" aria-expanded="false" aria-controls="faqC4">
+                  <span class="lp-faq-num">04</span>
+                  <span>كيف أقوم بتوقيع العقد واستلامه؟</span>
+                  <span class="lp-faq-toggle"><i class="fa-solid fa-plus"></i></span>
+                </button>
+              </h2>
+              <div id="faqC4" class="accordion-collapse collapse" aria-labelledby="faqH4"
+                data-bs-parent="#lpFaqAccordion">
+                <div class="accordion-body">
+                  بعد تأكيد التحويل البنكي، يُنشأ العقد تلقائياً وبشكل إلكتروني، ويمكنك قراءته وتوقيعه إلكترونياً بنقرة
+                  واحدة من صفحة العقود وطباعته أو تحميله بصيغة PDF في أي وقت.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faqH5">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faqC5" aria-expanded="false" aria-controls="faqC5">
+                  <span class="lp-faq-num">05</span>
+                  <span>كيف استلم الأرباح ورأس المال على حسابي البنكي؟</span>
+                  <span class="lp-faq-toggle"><i class="fa-solid fa-plus"></i></span>
+                </button>
+              </h2>
+              <div id="faqC5" class="accordion-collapse collapse" aria-labelledby="faqH5"
+                data-bs-parent="#lpFaqAccordion">
+                <div class="accordion-body">
+                  عند انتهاء مدة العقد، تحول المبالغ المستحقة (رأس المال + العمولة 7%) مباشرة إلى الحساب البنكي (IBAN)
+                  المسجل باسمك في ملفك الشخصي بالمنصة.
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+     Section 6: Bottom CTA Hero Banner
+     ========================================================================== -->
+  <section class="py-4 bg-white">
+    <div class="container">
+      <div class="lp-cta text-center text-lg-start reveal">
+        <div class="row align-items-center">
+          <div class="col-12 col-lg-8 position-relative" style="z-index: 2;">
+            <h2 class="fs-3 fw-bold mb-2">🚀 جاهز تبدأ وتكسب؟</h2>
+            <p class="fs-6 text-white-50 mb-3" style="max-width: 580px;">
+              أنشئ حسابك خلال دقيقة واحدة وابدأ حجز جهازك وحقق عمولة 7% فوراً بعقد موثّق باسم شركة فضل المتحدة!
+            </p>
+            <div class="d-flex flex-wrap align-items-center gap-3 justify-content-center">
+              <a href="pages/signup.html" class="lp-btn lp-btn-light px-4 py-2.5 fs-6">
+                <i class="fa-solid fa-user-plus text-primary"></i>
+                <span>إنشاء حساب جديد الآن</span>
+              </a>
+              <a href="pages/signin.html" class="lp-btn lp-btn-glass px-4 py-2.5 fs-6">
+                <i class="fa-solid fa-key"></i>
+                <span>تسجيل الدخول</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Decorative Floating iPhone Mockup -->
+          <div class="col-12 col-lg-4 d-none d-lg-block position-relative">
+            <div class="lp-cta-phone">
+              <img src="./src/image/product_1 (1).webp" alt="iPhone CTA" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+     Official Footer (Light Mode)
+     ========================================================================== -->
+  <footer class="lp-footer">
+    <div class="container">
+      <div class="row g-4 mb-4">
+
+        <!-- Column 1: Brand Info -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="d-flex align-items-center gap-2 mb-2">
+            <img src="./src/image/logo.webp" alt="الفضل للاتصالات" style="width: 34px;" />
+            <span class="text-dark fw-bold fs-6">الفضل للاتصالات</span>
+          </div>
+          <p class="small text-muted leading-relaxed mb-2">
+            منصة سعودية موثوقة تابعة لشركة فضل المتحدة، متخصصة في حجز وتوريد أجهزة الاتصالات الذكية بعقود رسمية وحماية
+            كاملة لحقوق العملاء.
+          </p>
+          <div class="small text-dark fw-semibold">
+            <i class="fa-solid fa-certificate text-primary me-1"></i> شركة فضل المتحدة — سجل تجاري: <strong
+              class="lp-num">7017634457</strong>
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="col-6 col-md-3 col-lg-2">
+          <h4 class="text-dark">روابط سريعة</h4>
+          <ul class="list-unstyled vstack gap-2 m-0 fs-7">
+            <li><a href="#hero" class="lp-footer-link">الرئيسية</a></li>
+            <li><a href="#how-it-works" class="lp-footer-link">كيف تعمل</a></li>
+            <li><a href="#features" class="lp-footer-link">المميزات</a></li>
+            <li><a href="#security" class="lp-footer-link">الأمان والتوثيق</a></li>
+            <li><a href="#faq" class="lp-footer-link">الأسئلة الشائعة</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Services & Pages -->
+        <div class="col-6 col-md-3 col-lg-3">
+          <h4 class="text-dark">الخدمات والحسابات</h4>
+          <ul class="list-unstyled vstack gap-2 m-0 fs-7">
+            <li><a href="pages/signup.html" class="lp-footer-link">إنشاء حساب جديد</a></li>
+            <li><a href="pages/signin.html" class="lp-footer-link">تسجيل الدخول</a></li>
+            <li><a href="pages/booking.html" class="lp-footer-link">حجز الأجهزة</a></li>
+            <li><a href="pages/contract.html" class="lp-footer-link">توثيق العقود</a></li>
+            <li><a href="pages/account.html" class="lp-footer-link">التسويات والأرباح</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Contact Information -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <h4 class="text-dark">تواصل معنا</h4>
+          <ul class="list-unstyled vstack gap-2 m-0 fs-7 text-muted">
+            <li><i class="fa-solid fa-location-dot text-primary me-2"></i> المملكة العربية السعودية - الرياض</li>
+            <li><i class="fa-solid fa-envelope text-primary me-2"></i> support@alfadhl.com</li>
+            <li><i class="fa-solid fa-phone text-primary me-2"></i> 920000000</li>
+            <li><i class="fa-solid fa-clock text-primary me-2"></i> الدعم الفني: 24/7</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Payment & Security Icons Line -->
+      <div class="pt-3 border-top d-flex flex-wrap align-items-center justify-content-between gap-2 text-muted fs-7">
+        <div>
+          © 2026 شركة فضل المتحدة (الفضل للاتصالات). جميع الحقوق محفوظة.
+        </div>
+        <div class="d-flex align-items-center gap-2">
+          <span class="lp-pay text-primary"><i class="fa-brands fa-cc-visa" title="Visa"></i></span>
+          <span class="lp-pay text-danger"><i class="fa-brands fa-cc-mastercard" title="Mastercard"></i></span>
+          <span class="lp-pay text-dark"><i class="fa-brands fa-apple-pay" title="Apple Pay"></i></span>
+          <span class="badge bg-secondary-subtle text-secondary fs-7 px-2 py-1.5">مدى Mada</span>
+          <span class="badge bg-primary-subtle text-primary border border-primary-subtle fs-7 px-2 py-1.5">SSL
+            Secured</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Back To Top Button with Scroll Progress Ring -->
+  <button type="button" class="lp-to-top" id="lpToTop" aria-label="العودة للأعلى">
+    <span><i class="fa-solid fa-arrow-up"></i></span>
+  </button>
+
+  <!-- Bootstrap 5 Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./js/bootstrap.bundle.min.js"></script>
+
+  <!-- Dedicated Landing Page Script Engine -->
+  <script src="./js/landing.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>حسابي المالي - منصة الفضل للاتصالات</title>
+
+  <!-- Google Fonts Readex Pro -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Pro / Free CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="../css/font-awesome-pro.css?v=1.1" />
+
+  <!-- Bootstrap 5.3.3 RTL CDN & Local Fallback -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" />
+  <link rel="stylesheet" href="../css/bootstrap.min.css?v=1.1" />
+
+  <!-- Custom Shared Styles -->
+  <link rel="stylesheet" href="../css/style.css?v=4.4" />
+</head>
+<body class="home-page-body">
+
+  <!-- Top Navbar -->
+  <nav class="home-navbar" id="homeNavbar">
+    <div class="home-nav-container">
+
+      <!-- RIGHT (RTL-start): Brand Logo & Title -->
+      <a href="home.html" class="home-nav-brand">
+        <div class="home-brand-logo-wrapper">
+          <img src="../src/image/logo.webp" alt="الفضل للاتصالات" />
+        </div>
+        <div class="home-brand-text-col">
+          <span class="home-brand-name">الفضل للاتصالات</span>
+          <span class="home-brand-sub">بوابة العملاء المعتمدة</span>
+        </div>
+      </a>
+
+      <!-- CENTER (desktop): Navigation Links -->
+      <ul class="home-nav-links">
+        <li><a href="home.html" class="home-nav-link"><i class="fa-solid fa-house-chimney"></i><span>لوحتي</span></a></li>
+        <li><a href="booking.html" class="home-nav-link"><i class="fa-solid fa-calendar-check"></i><span>الحجز</span></a></li>
+        <li><a href="orders.html" class="home-nav-link"><i class="fa-solid fa-box"></i><span>طلباتي</span></a></li>
+        <li><a href="account.html" class="home-nav-link active"><i class="fa-solid fa-wallet"></i><span>حسابي</span></a></li>
+        <li><a href="profile.html" class="home-nav-link"><i class="fa-solid fa-user-gear"></i><span>ملفي</span></a></li>
+      </ul>
+
+      <!-- LEFT (RTL-end): Controls (Bell + Circular Logout Button + Mobile Hamburger) -->
+      <div class="home-nav-left-controls">
+        <div class="nav-bell-icon" title="الإشعارات">
+          <i class="fa-regular fa-bell"></i>
+          <span class="nav-bell-dot"></span>
+        </div>
+        <a href="../index.html" class="nav-logout-icon" title="تسجيل الخروج" aria-label="تسجيل الخروج">
+          <i class="fa-solid fa-right-from-bracket"></i>
+        </a>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" title="القائمة" aria-label="فتح القائمة">
+          <i class="fa-solid fa-bars" id="mobileMenuIcon"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Collapse Menu -->
+    <div class="mobile-nav-collapse" id="mobileNavCollapse">
+      <a href="home.html" class="mobile-collapse-link"><i class="fa-solid fa-house-chimney me-2"></i>لوحتي</a>
+      <a href="booking.html" class="mobile-collapse-link"><i class="fa-solid fa-calendar-check me-2"></i>الحجز</a>
+      <a href="orders.html" class="mobile-collapse-link"><i class="fa-solid fa-box me-2"></i>طلباتي</a>
+      <a href="account.html" class="mobile-collapse-link active"><i class="fa-solid fa-wallet me-2"></i>حسابي</a>
+      <a href="profile.html" class="mobile-collapse-link"><i class="fa-solid fa-user-gear me-2"></i>ملفي</a>
+      <a href="../index.html" class="mobile-collapse-link mobile-collapse-logout">
+        <i class="fa-solid fa-right-from-bracket me-2"></i>
+        تسجيل الخروج
+      </a>
+    </div>
+  </nav>
+
+  <!-- Main Financial Account Content -->
+  <main class="home-main-container mt-4">
+
+    <!-- Account Hero Header Banner -->
+    <div class="orders-hero-header">
+      <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
+        <div class="d-flex align-items-center gap-3">
+          <div class="orders-hero-icon">
+            <i class="fa-solid fa-wallet"></i>
+          </div>
+          <div>
+            <div class="booking-portal-badge mb-1">
+              <span class="pulse-dot-mini green"></span>
+              <span>المركز المالي والمحفظة الرقمية</span>
+            </div>
+            <h2 class="fs-4 fw-bold text-dark m-0">
+              <span>حسابي المالي وإدارة التسويات</span>
+            </h2>
+            <p class="text-muted small m-0 mt-1">متابعة دقيقة للأرصدة، مستحقات التصفية، وكشف الحساب التفصيلي للعمليات</p>
+          </div>
+        </div>
+
+        <div class="account-hero-pills-row">
+          <div class="booking-stat-pill pill-primary">
+            <i class="fa-solid fa-receipt"></i>
+            <span>2 تسوية مسجلة</span>
+          </div>
+          <div class="booking-stat-pill pill-success">
+            <i class="fa-solid fa-circle-check"></i>
+            <span>الحساب نشط وموثق</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Top Summary Cards Row -->
+    <div class="row g-3 mb-4">
+      
+      <!-- Card 1: Estimated Balance (الرصيد التقديري) -->
+      <div class="col-12 col-md-4">
+        <div class="card border rounded-4 p-3 p-md-4 text-center bg-white shadow-sm h-100" style="border-top: 4px solid #16a34a !important; border-color: #e2e8f0;">
+          <div class="fs-3 fw-bold text-success mb-1" style="font-family: 'Inter', 'Readex Pro', sans-serif;">
+            5,554.99 <small class="fs-6 fw-bold">ريال</small>
+          </div>
+          <div class="text-muted small fw-semibold d-flex align-items-center justify-content-center gap-2">
+            <i class="fa-solid fa-arrow-trend-up text-success"></i>
+            <span>الرصيد التقديري</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2: Available for Withdrawal (متاح للسحب) -->
+      <div class="col-12 col-md-4">
+        <div class="card border rounded-4 p-3 p-md-4 text-center bg-white shadow-sm h-100" style="border-top: 4px solid #0284c7 !important; border-color: #e2e8f0;">
+          <div class="fs-3 fw-bold text-dark mb-1" style="font-family: 'Inter', 'Readex Pro', sans-serif;">
+            0 <small class="fs-6 fw-bold text-muted">ريال</small>
+          </div>
+          <div class="text-muted small fw-semibold d-flex align-items-center justify-content-center gap-2">
+            <i class="fa-solid fa-money-bill-wave text-primary"></i>
+            <span>متاح للسحب</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3: Completed Settlements (تسويات مكتملة) -->
+      <div class="col-12 col-md-4">
+        <div class="card border rounded-4 p-3 p-md-4 text-center bg-white shadow-sm h-100" style="border-top: 4px solid #0284c7 !important; border-color: #e2e8f0;">
+          <div class="fs-3 fw-bold text-dark mb-1" style="font-family: 'Inter', 'Readex Pro', sans-serif;">
+            1 <small class="fs-6 fw-bold text-muted">تسوية</small>
+          </div>
+          <div class="text-muted small fw-semibold d-flex align-items-center justify-content-center gap-2">
+            <i class="fa-solid fa-circle-check text-primary"></i>
+            <span>تسويات مكتملة</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Section 1: "تصفياتي" (Settlements Card) -->
+    <div class="dashboard-table-card card border rounded-4 bg-white shadow-sm overflow-hidden mb-4" style="border-color: #e2e8f0;">
+      <div class="d-flex align-items-center justify-content-between p-3 px-4 border-bottom bg-light">
+        <h3 class="fs-6 fw-bold text-primary m-0 d-flex align-items-center gap-2">
+          <i class="fa-solid fa-clipboard-list text-primary"></i>
+          <span>تصفياتي</span>
+        </h3>
+        <span class="badge bg-primary-subtle text-primary border border-primary-subtle rounded-pill px-3 py-1.5 small fw-bold">
+          2 تسوية
+        </span>
+      </div>
+
+      <!-- Search & Status Filter Toolbar -->
+      <div class="p-3 border-bottom bg-light-subtle">
+        <div class="row g-2 align-items-center">
+          <div class="col-12 col-md-5">
+            <div class="position-relative">
+              <i class="fa-solid fa-magnifying-glass position-absolute top-50 start-0 translate-middle-y ms-3 text-muted fs-7"></i>
+              <input type="text" class="table-search-input form-control ps-5 pe-3 py-1.5 rounded-3 fs-7" placeholder="ابحث برقم الطلب، المنتج، أو الحالة..." />
+            </div>
+          </div>
+          <div class="col-12 col-md-7">
+            <div class="d-flex flex-wrap align-items-center gap-1.5 justify-content-md-end">
+              <button class="filter-pill-btn active" data-filter="all">الكل</button>
+              <button class="filter-pill-btn" data-filter="completed">تمت التسوية</button>
+              <button class="filter-pill-btn" data-filter="pending">غير مستحق</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Desktop Table View -->
+      <div class="table-responsive desktop-only-view">
+        <table class="custom-dashboard-table mb-0">
+          <thead>
+            <tr>
+              <th>الطلب</th>
+              <th>المنتج</th>
+              <th class="text-center">الكمية</th>
+              <th>رأس المال</th>
+              <th>العمولة (7%)</th>
+              <th>الإجمالي</th>
+              <th>الحالة</th>
+              <th class="text-center">الإجراء / التاريخ</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Row 1 -->
+            <tr data-status="completed">
+              <td>
+                <span class="code-card-badge"><i class="fa-regular fa-hashtag me-1 text-muted"></i>ALF-20260928-38AD7</span>
+              </td>
+              <td class="fw-bold text-dark">Apple iPhone 17 Pro 1T أزرق داكن</td>
+              <td class="text-center fw-bold"><span class="badge bg-light text-dark border px-2.5 py-1">4</span></td>
+              <td class="fw-semibold">22,219.98 ريال</td>
+              <td class="text-success fw-bold">+1,555.40 ريال</td>
+              <td class="fw-bold text-primary">23,775.38 ريال</td>
+              <td>
+                <span class="status-pill status-completed">
+                  <span class="pulse-dot green"></span>
+                  <i class="fa-solid fa-check"></i> تمت التسوية
+                </span>
+              </td>
+              <td class="text-center">
+                <span class="text-muted small me-2">28/09/2026</span>
+                <i class="fa-solid fa-circle-check text-success fs-6" title="تم التحويل"></i>
+              </td>
+            </tr>
+            <!-- Row 2 -->
+            <tr data-status="pending">
+              <td>
+                <span class="code-card-badge"><i class="fa-regular fa-hashtag me-1 text-muted"></i>ALF-20260928-A2788</span>
+              </td>
+              <td class="fw-bold text-dark">Apple iPhone 17 Pro 1T أزرق داكن</td>
+              <td class="text-center fw-bold"><span class="badge bg-light text-dark border px-2.5 py-1">1</span></td>
+              <td class="fw-semibold">5,554.99 ريال</td>
+              <td class="text-success fw-bold">+388.85 ريال</td>
+              <td class="fw-bold text-primary">5,943.84 ريال</td>
+              <td>
+                <span class="status-pill status-pending-pay">
+                  <span class="pulse-dot amber"></span>
+                  <i class="fa-regular fa-clock"></i> غير مستحق
+                </span>
+              </td>
+              <td class="text-center">
+                <span class="text-muted small">في انتظار البيع</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Mobile Card List View -->
+      <div class="mobile-only-card-list">
+        <!-- Item 1: ALF-20260928-38AD7 -->
+        <div class="p-3 border-bottom bg-white" data-status="completed">
+          <div class="d-flex align-items-center justify-content-between mb-2">
+            <span class="code-card-badge"><i class="fa-regular fa-hashtag me-1 text-muted"></i>ALF-20260928-38AD7</span>
+            <span class="status-pill status-completed">
+              <span class="pulse-dot green"></span>
+              <i class="fa-solid fa-check"></i> تمت التسوية
+            </span>
+          </div>
+
+          <div class="fw-bold text-dark mb-2" style="font-size: 13.5px;">
+            4 × Apple iPhone 17 Pro 1T أزرق داكن
+          </div>
+
+          <div class="row g-2 text-center p-2 rounded-3 bg-light border border-light-subtle mb-2">
+            <div class="col-4 text-start">
+              <div class="text-muted" style="font-size: 11px;">رأس المال</div>
+              <div class="fw-bold text-dark" style="font-size: 13px;">22,219.98 <small>ريال</small></div>
+            </div>
+            <div class="col-4">
+              <div class="text-muted" style="font-size: 11px;">العمولة</div>
+              <div class="fw-bold text-success" style="font-size: 13px;">+1,555.40 <small>ريال</small></div>
+            </div>
+            <div class="col-4 text-end">
+              <div class="text-muted" style="font-size: 11px;">الإجمالي</div>
+              <div class="fw-bold text-primary" style="font-size: 13px;">23,775.38 <small>ريال</small></div>
+            </div>
+          </div>
+
+          <div class="d-flex align-items-center gap-1 text-muted small">
+            <i class="fa-solid fa-circle-check text-success"></i>
+            <span>تم التحويل بتاريخ 28/09/2026</span>
+          </div>
+        </div>
+
+        <!-- Item 2: ALF-20260928-A2788 -->
+        <div class="p-3 bg-white" data-status="pending">
+          <div class="d-flex align-items-center justify-content-between mb-2">
+            <span class="code-card-badge"><i class="fa-regular fa-hashtag me-1 text-muted"></i>ALF-20260928-A2788</span>
+            <span class="status-pill status-pending-pay">
+              <span class="pulse-dot amber"></span>
+              <i class="fa-regular fa-clock"></i> غير مستحق
+            </span>
+          </div>
+
+          <div class="fw-bold text-dark mb-2" style="font-size: 13.5px;">
+            1 × Apple iPhone 17 Pro 1T أزرق داكن
+          </div>
+
+          <div class="row g-2 text-center p-2 rounded-3 bg-light border border-light-subtle mb-2">
+            <div class="col-4 text-start">
+              <div class="text-muted" style="font-size: 11px;">رأس المال</div>
+              <div class="fw-bold text-dark" style="font-size: 13px;">5,554.99 <small>ريال</small></div>
+            </div>
+            <div class="col-4">
+              <div class="text-muted" style="font-size: 11px;">العمولة</div>
+              <div class="fw-bold text-success" style="font-size: 13px;">+388.85 <small>ريال</small></div>
+            </div>
+            <div class="col-4 text-end">
+              <div class="text-muted" style="font-size: 11px;">الإجمالي</div>
+              <div class="fw-bold text-primary" style="font-size: 13px;">5,943.84 <small>ريال</small></div>
+            </div>
+          </div>
+
+          <div class="d-flex align-items-center gap-1 text-muted small">
+            <i class="fa-regular fa-clock text-warning"></i>
+            <span>في انتظار البيع</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Table Dynamic Pagination Footer -->
+      <div class="table-card-footer d-flex flex-wrap align-items-center justify-content-between gap-3 p-3 border-top bg-white">
+        <div class="table-counter-text text-muted fs-7">
+          عرض <strong class="showing-start text-dark">1</strong> - <strong class="showing-end text-dark">2</strong> من إجمالي <strong class="total-count text-dark">2</strong> تسوية
+        </div>
+        <div class="table-pagination-group d-flex align-items-center gap-2">
+          <button type="button" class="page-btn page-arrow page-prev-btn" disabled aria-label="الصفحة السابقة"><i class="fa-solid fa-chevron-right"></i></button>
+          <div class="page-numbers-container d-flex align-items-center gap-2"></div>
+          <button type="button" class="page-btn page-arrow page-next-btn" aria-label="الصفحة التالية"><i class="fa-solid fa-chevron-left"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 2: "كشف حسابي" (Account Statement Table) -->
+    <div class="dashboard-table-card card border rounded-4 bg-white shadow-sm overflow-hidden mb-5" style="border-color: #e2e8f0;">
+      <div class="d-flex align-items-center justify-content-between p-3 px-4 border-bottom bg-light">
+        <h3 class="fs-6 fw-bold text-primary m-0 d-flex align-items-center gap-2">
+          <i class="fa-solid fa-receipt text-primary"></i>
+          <span>كشف حسابي</span>
+        </h3>
+        <span class="text-muted small">سجل العمليات المالية الحديثة</span>
+      </div>
+
+      <!-- Search & Status Filter Toolbar -->
+      <div class="p-3 border-bottom bg-light-subtle">
+        <div class="row g-2 align-items-center">
+          <div class="col-12 col-md-5">
+            <div class="position-relative">
+              <i class="fa-solid fa-magnifying-glass position-absolute top-50 start-0 translate-middle-y ms-3 text-muted fs-7"></i>
+              <input type="text" class="table-search-input form-control ps-5 pe-3 py-1.5 rounded-3 fs-7" placeholder="ابحث بالتاريخ، البيان، أو المبلغ..." />
+            </div>
+          </div>
+          <div class="col-12 col-md-7">
+            <div class="d-flex flex-wrap align-items-center gap-1.5 justify-content-md-end">
+              <button class="filter-pill-btn active" data-filter="all">الكل</button>
+              <button class="filter-pill-btn" data-filter="debit">مدين</button>
+              <button class="filter-pill-btn" data-filter="credit">دائن</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Desktop Table View -->
+      <div class="table-responsive desktop-only-view">
+        <table class="custom-dashboard-table mb-0">
+          <thead>
+            <tr>
+              <th>التاريخ والوقت</th>
+              <th>نوع العملية</th>
+              <th>الوصف والبيان</th>
+              <th>المبلغ</th>
+              <th>الرصيد بعد العملية</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Statement Row 1 -->
+            <tr data-status="debit">
+              <td class="text-muted small font-monospace"><i class="fa-regular fa-clock me-1 text-muted"></i>14:24 28/09/2026</td>
+              <td>
+                <span class="badge bg-danger-subtle text-danger border border-danger-subtle rounded-pill px-2.5 py-1 fw-bold">
+                  مدين ↑
+                </span>
+              </td>
+              <td class="fw-medium text-dark">تسوية مستحقات الطلب ALF-20260928-38AD7</td>
+              <td class="text-danger fw-bold">-23,775.38 ريال</td>
+              <td class="fw-bold text-dark">5,554.99 ريال</td>
+            </tr>
+            <!-- Statement Row 2 -->
+            <tr data-status="credit">
+              <td class="text-muted small font-monospace"><i class="fa-regular fa-clock me-1 text-muted"></i>14:22 28/09/2026</td>
+              <td>
+                <span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill px-2.5 py-1 fw-bold">
+                  دائن ↓
+                </span>
+              </td>
+              <td class="fw-medium text-dark">عمولة للطلب ALF-20260928-38AD7</td>
+              <td class="text-success fw-bold">+1,555.40 ريال</td>
+              <td class="fw-bold text-dark">29,330.37 ريال</td>
+            </tr>
+            <!-- Statement Row 3 -->
+            <tr data-status="credit">
+              <td class="text-muted small font-monospace"><i class="fa-regular fa-clock me-1 text-muted"></i>14:15 28/09/2026</td>
+              <td>
+                <span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill px-2.5 py-1 fw-bold">
+                  دائن ↓
+                </span>
+              </td>
+              <td class="fw-medium text-dark">استلام دفع الطلب رقم ALF-20260928-38AD7</td>
+              <td class="text-success fw-bold">+22,219.98 ريال</td>
+              <td class="fw-bold text-dark">27,774.97 ريال</td>
+            </tr>
+            <!-- Statement Row 4 -->
+            <tr data-status="credit">
+              <td class="text-muted small font-monospace"><i class="fa-regular fa-clock me-1 text-muted"></i>10:58 28/09/2026</td>
+              <td>
+                <span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill px-2.5 py-1 fw-bold">
+                  دائن ↓
+                </span>
+              </td>
+              <td class="fw-medium text-dark">استلام دفع الطلب رقم ALF-20260928-A2788</td>
+              <td class="text-success fw-bold">+5,554.99 ريال</td>
+              <td class="fw-bold text-dark">5,554.99 ريال</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Mobile Statement Card List View -->
+      <div class="mobile-only-card-list">
+        <!-- Statement Item 1 -->
+        <div class="p-3 border-bottom bg-white" data-status="debit">
+          <div class="d-flex align-items-center justify-content-between mb-2">
+            <span class="text-muted small font-monospace"><i class="fa-regular fa-clock me-1"></i>14:24 28/09/2026</span>
+            <span class="badge bg-danger-subtle text-danger border border-danger-subtle rounded-pill px-2 py-1 fw-bold">مدين ↑</span>
+          </div>
+          <div class="fw-bold text-dark mb-2" style="font-size: 13.5px;">
+            تسوية مستحقات الطلب ALF-20260928-38AD7
+          </div>
+          <div class="d-flex align-items-center justify-content-between pt-2 border-top">
+            <div>
+              <span class="text-muted small">المبلغ:</span>
+              <span class="text-danger fw-bold ms-1">-23,775.38 ريال</span>
+            </div>
+            <div>
+              <span class="text-muted small">الرصيد:</span>
+              <span class="fw-bold text-dark ms-1">5,554.99 ريال</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Statement Item 2 -->
+        <div class="p-3 border-bottom bg-white" data-status="credit">
+          <div class="d-flex align-items-center justify-content-between mb-2">
+            <span class="text-muted small font-monospace"><i class="fa-regular fa-clock me-1"></i>14:22 28/09/2026</span>
+            <span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill px-2 py-1 fw-bold">دائن ↓</span>
+          </div>
+          <div class="fw-bold text-dark mb-2" style="font-size: 13.5px;">
+            عمولة للطلب ALF-20260928-38AD7
+          </div>
+          <div class="d-flex align-items-center justify-content-between pt-2 border-top">
+            <div>
+              <span class="text-muted small">المبلغ:</span>
+              <span class="text-success fw-bold ms-1">+1,555.40 ريال</span>
+            </div>
+            <div>
+              <span class="text-muted small">الرصيد:</span>
+              <span class="fw-bold text-dark ms-1">29,330.37 ريال</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Statement Item 3 -->
+        <div class="p-3 border-bottom bg-white" data-status="credit">
+          <div class="d-flex align-items-center justify-content-between mb-2">
+            <span class="text-muted small font-monospace"><i class="fa-regular fa-clock me-1"></i>14:15 28/09/2026</span>
+            <span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill px-2 py-1 fw-bold">دائن ↓</span>
+          </div>
+          <div class="fw-bold text-dark mb-2" style="font-size: 13.5px;">
+            استلام دفع الطلب رقم ALF-20260928-38AD7
+          </div>
+          <div class="d-flex align-items-center justify-content-between pt-2 border-top">
+            <div>
+              <span class="text-muted small">المبلغ:</span>
+              <span class="text-success fw-bold ms-1">+22,219.98 ريال</span>
+            </div>
+            <div>
+              <span class="text-muted small">الرصيد:</span>
+              <span class="fw-bold text-dark ms-1">27,774.97 ريال</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Statement Item 4 -->
+        <div class="p-3 bg-white" data-status="credit">
+          <div class="d-flex align-items-center justify-content-between mb-2">
+            <span class="text-muted small font-monospace"><i class="fa-regular fa-clock me-1"></i>10:58 28/09/2026</span>
+            <span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill px-2 py-1 fw-bold">دائن ↓</span>
+          </div>
+          <div class="fw-bold text-dark mb-2" style="font-size: 13.5px;">
+            استلام دفع الطلب رقم ALF-20260928-A2788
+          </div>
+          <div class="d-flex align-items-center justify-content-between pt-2 border-top">
+            <div>
+              <span class="text-muted small">المبلغ:</span>
+              <span class="text-success fw-bold ms-1">+5,554.99 ريال</span>
+            </div>
+            <div>
+              <span class="text-muted small">الرصيد:</span>
+              <span class="fw-bold text-dark ms-1">5,554.99 ريال</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Table Dynamic Pagination Footer -->
+      <div class="table-card-footer d-flex flex-wrap align-items-center justify-content-between gap-3 p-3 border-top bg-white">
+        <div class="table-counter-text text-muted fs-7">
+          عرض <strong class="showing-start text-dark">1</strong> - <strong class="showing-end text-dark">4</strong> من إجمالي <strong class="total-count text-dark">4</strong> عمليات
+        </div>
+        <div class="table-pagination-group d-flex align-items-center gap-2">
+          <button type="button" class="page-btn page-arrow page-prev-btn" disabled aria-label="الصفحة السابقة"><i class="fa-solid fa-chevron-right"></i></button>
+          <div class="page-numbers-container d-flex align-items-center gap-2"></div>
+          <button type="button" class="page-btn page-arrow page-next-btn" aria-label="الصفحة التالية"><i class="fa-solid fa-chevron-left"></i></button>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Fixed Mobile Bottom Navigation Bar -->
+  <div class="mobile-bottom-nav">
+    <a href="home.html" class="mobile-nav-item">
+      <div class="mobile-nav-icon-wrap">
+        <i class="fa-solid fa-house"></i>
+      </div>
+      <span>لوحتي</span>
+    </a>
+    <a href="booking.html" class="mobile-nav-item">
+      <div class="mobile-nav-icon-wrap">
+        <i class="fa-solid fa-calendar-check"></i>
+      </div>
+      <span>الحجز</span>
+    </a>
+    <a href="orders.html" class="mobile-nav-item mobile-nav-center">
+      <div class="mobile-nav-center-circle">
+        <i class="fa-solid fa-box"></i>
+      </div>
+      <span>طلباتي</span>
+    </a>
+    <a href="account.html" class="mobile-nav-item active">
+      <div class="mobile-nav-icon-wrap">
+        <i class="fa-solid fa-wallet"></i>
+        <span class="mobile-active-dot"></span>
+      </div>
+      <span>حسابي</span>
+    </a>
+    <a href="profile.html" class="mobile-nav-item">
+      <div class="mobile-nav-icon-wrap">
+        <i class="fa-solid fa-user"></i>
+      </div>
+      <span>ملفي</span>
+    </a>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="../js/script.js?v=2.6"></script>
+</body>
+</html>

@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ملفي التعريفي - منصة الفضل للاتصالات</title>
+
+  <!-- Google Fonts Readex Pro -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome 6 Pro / Free CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="../css/font-awesome-pro.css?v=1.1" />
+
+  <!-- Bootstrap 5.3.3 RTL CDN & Local Fallback -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" />
+  <link rel="stylesheet" href="../css/bootstrap.min.css?v=1.1" />
+
+  <!-- Custom Shared Styles -->
+  <link rel="stylesheet" href="../css/style.css?v=4.5" />
+</head>
+
+<body class="home-page-body">
+
+  <!-- Top Navbar -->
+  <nav class="home-navbar" id="homeNavbar">
+    <div class="home-nav-container">
+
+      <!-- RIGHT (RTL-start): Brand Logo & Title -->
+      <a href="home.html" class="home-nav-brand">
+        <div class="home-brand-logo-wrapper">
+          <img src="../src/image/logo.webp" alt="الفضل للاتصالات" />
+        </div>
+        <div class="home-brand-text-col">
+          <span class="home-brand-name">الفضل للاتصالات</span>
+          <span class="home-brand-sub">بوابة العملاء المعتمدة</span>
+        </div>
+      </a>
+
+      <!-- CENTER (desktop): Navigation Links -->
+      <ul class="home-nav-links">
+        <li><a href="home.html" class="home-nav-link"><i class="fa-solid fa-house-chimney"></i><span>لوحتي</span></a>
+        </li>
+        <li><a href="booking.html" class="home-nav-link"><i
+              class="fa-solid fa-calendar-check"></i><span>الحجز</span></a></li>
+        <li><a href="orders.html" class="home-nav-link"><i class="fa-solid fa-box"></i><span>طلباتي</span></a></li>
+        <li><a href="account.html" class="home-nav-link"><i class="fa-solid fa-wallet"></i><span>حسابي</span></a></li>
+        <li><a href="profile.html" class="home-nav-link active"><i
+              class="fa-solid fa-user-gear"></i><span>ملفي</span></a></li>
+      </ul>
+
+      <!-- LEFT (RTL-end): Controls (Bell + Circular Logout Button + Mobile Hamburger) -->
+      <div class="home-nav-left-controls">
+        <div class="nav-bell-icon" title="الإشعارات">
+          <i class="fa-regular fa-bell"></i>
+          <span class="nav-bell-dot"></span>
+        </div>
+        <a href="../index.html" class="nav-logout-icon" title="تسجيل الخروج" aria-label="تسجيل الخروج">
+          <i class="fa-solid fa-right-from-bracket"></i>
+        </a>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" title="القائمة" aria-label="فتح القائمة">
+          <i class="fa-solid fa-bars" id="mobileMenuIcon"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Collapse Menu -->
+    <div class="mobile-nav-collapse" id="mobileNavCollapse">
+      <a href="home.html" class="mobile-collapse-link"><i class="fa-solid fa-house-chimney me-2"></i>لوحتي</a>
+      <a href="booking.html" class="mobile-collapse-link"><i class="fa-solid fa-calendar-check me-2"></i>الحجز</a>
+      <a href="orders.html" class="mobile-collapse-link"><i class="fa-solid fa-box me-2"></i>طلباتي</a>
+      <a href="account.html" class="mobile-collapse-link"><i class="fa-solid fa-wallet me-2"></i>حسابي</a>
+      <a href="profile.html" class="mobile-collapse-link active"><i class="fa-solid fa-user-gear me-2"></i>ملفي</a>
+      <a href="../index.html" class="mobile-collapse-link mobile-collapse-logout">
+        <i class="fa-solid fa-right-from-bracket me-2"></i>
+        تسجيل الخروج
+      </a>
+    </div>
+  </nav>
+
+  <!-- Main Profile Content Container -->
+  <main class="home-main-container mt-4 mb-5 pb-4">
+
+    <!-- Profile Hero Header Banner -->
+    <div class="orders-hero-header">
+      <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
+        <div class="d-flex align-items-center gap-3">
+          <div class="orders-hero-icon">
+            <i class="fa-solid fa-user-gear"></i>
+          </div>
+          <div>
+            <div class="booking-portal-badge mb-1">
+              <span class="pulse-dot-mini green"></span>
+              <span>إدارة الحساب والملف الشخصي</span>
+            </div>
+            <h2 class="fs-4 fw-bold text-dark m-0">
+              <span>ملفي الشخصي وإعدادات الأمان</span>
+            </h2>
+            <p class="text-muted small m-0 mt-1">إدارة بيانات العميل، الحسابات البنكية المعتمدة، وتوثيق الاتصال الرقمي
+            </p>
+          </div>
+        </div>
+
+        <div class="profile-hero-pills-row">
+          <div class="booking-stat-pill pill-success">
+            <i class="fa-solid fa-shield-check"></i>
+            <span>حساب عميل موثق</span>
+          </div>
+          <div class="booking-stat-pill pill-primary">
+            <i class="fa-solid fa-circle-check"></i>
+            <span>عضوية نشطة</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Responsive Layout: 2 Columns on Desktop -->
+    <div class="row g-4">
+
+      <!-- Column 1: Client Overview & Security (Desktop: 4 cols) -->
+      <div class="col-12 col-lg-4">
+
+        <!-- Card A: Customer Card -->
+        <div class="card border rounded-4 bg-white p-4 shadow-sm mb-4" style="border-color: #e2e8f0;">
+          <div class="text-center pb-3 border-bottom">
+            <div class="mx-auto mb-3 d-flex align-items-center justify-content-center text-primary fw-bold"
+              style="width: 76px; height: 76px; border-radius: 50%; background: #e0f2fe; font-size: 32px; border: 2px solid #bae6fd;">
+              <i class="fa-solid fa-user-tie"></i>
+            </div>
+            <h3 class="fs-5 fw-bold text-dark mb-1">عبدالرحمن العتيبي</h3>
+            <span
+              class="badge bg-success-subtle text-success border border-success-subtle rounded-pill px-3 py-1.5 small fw-semibold">
+              <i class="fa-solid fa-circle-check me-1"></i> عميل معتمد وموثق
+            </span>
+          </div>
+
+          <!-- Key Client Details List -->
+          <div class="d-flex flex-column pt-3">
+            <div class="d-flex align-items-center justify-content-between py-2 border-bottom">
+              <span class="text-muted small d-flex align-items-center gap-1.5">
+                <i class="fa-regular fa-id-card text-muted"></i> رقم الهوية
+              </span>
+              <span class="fw-bold text-dark font-monospace">1072903311</span>
+            </div>
+            <div class="d-flex align-items-center justify-content-between py-2 border-bottom">
+              <span class="text-muted small d-flex align-items-center gap-1.5">
+                <i class="fa-solid fa-mobile-screen text-muted"></i> رقم الجوال
+              </span>
+              <span class="fw-bold text-dark font-monospace">505792300</span>
+            </div>
+            <div class="d-flex align-items-center justify-content-between py-2 border-bottom">
+              <span class="text-muted small d-flex align-items-center gap-1.5">
+                <i class="fa-solid fa-location-dot text-muted"></i> المدينة
+              </span>
+              <span class="fw-bold text-dark">الرياض</span>
+            </div>
+            <div class="d-flex align-items-center justify-content-between py-2">
+              <span class="text-muted small d-flex align-items-center gap-1.5">
+                <i class="fa-regular fa-calendar-check text-muted"></i> تاريخ التسجيل
+              </span>
+              <span class="fw-bold text-dark font-monospace">09/04/2026</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card B: Account Verification Status -->
+        <div class="card border rounded-4 bg-white p-4 shadow-sm mb-4" style="border-color: #e2e8f0;">
+          <div class="d-flex align-items-center justify-content-between pb-3 mb-3 border-bottom">
+            <div class="d-flex align-items-center gap-2">
+              <i class="fa-solid fa-shield-halved text-primary fs-5"></i>
+              <span class="fw-bold fs-6 text-dark">توثيق الحساب</span>
+            </div>
+            <span
+              class="badge bg-success-subtle text-success border border-success-subtle rounded-pill px-2.5 py-1 small fw-semibold">
+              مكتمل <i class="fa-solid fa-check ms-1"></i>
+            </span>
+          </div>
+
+          <p class="text-muted small mb-3">يتم توثيق الحساب وتوقيع العقود عبر البريد الإلكتروني فقط.</p>
+
+          <div
+            class="account-email-box bg-light p-3 rounded-3 d-flex align-items-center justify-content-between flex-wrap gap-2 border border-light-subtle overflow-hidden">
+            <div class="d-flex align-items-center gap-2 min-w-0 flex-grow-1" style="max-width: 100%;">
+              <i class="fa-solid fa-envelope text-primary flex-shrink-0"></i>
+              <span class="fw-bold text-dark small text-nowrap flex-shrink-0">البريد:</span>
+              <span class="text-dark small font-monospace user-email-text text-truncate"
+                style="word-break: break-all; overflow-wrap: anywhere; min-width: 0;"
+                title="otaibifirst@gmail.com">otaibifirst@gmail.com</span>
+            </div>
+            <span
+              class="badge bg-success-subtle text-success border border-success-subtle rounded-pill px-2.5 py-1 small fw-semibold flex-shrink-0 ms-auto ms-sm-0">
+              <i class="fa-solid fa-check me-1"></i> موثق
+            </span>
+          </div>
+        </div>
+
+        <!-- Card C: Account Security & Password -->
+        <div class="card border rounded-4 bg-white p-4 shadow-sm mb-4" style="border-color: #e2e8f0;">
+          <div class="d-flex align-items-center gap-2 pb-3 mb-3 border-bottom">
+            <i class="fa-solid fa-lock text-primary fs-5"></i>
+            <span class="fw-bold fs-6 text-dark">الأمان وتسجيل الدخول</span>
+          </div>
+
+          <div class="d-flex flex-column gap-3">
+            <div class="text-muted small font-monospace bg-light p-2.5 rounded-3 border border-light-subtle">
+              <i class="fa-solid fa-shield-cat me-1 text-primary"></i> آخر دخول: 17:52 30/09/2026 (78.137.70.39)
+            </div>
+            <button type="button"
+              class="btn btn-outline-primary py-2.5 rounded-3 fw-bold d-flex align-items-center justify-content-center gap-2"
+              data-bs-toggle="modal" data-bs-target="#changePasswordModal">
+              <i class="fa-solid fa-key"></i>
+              <span>تغيير كلمة المرور</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Column 2: Personal Update Form & Bank Accounts (Desktop: 8 cols) -->
+      <div class="col-12 col-lg-8">
+
+        <!-- Card 1: Request Data Update Form -->
+        <div class="card border rounded-4 bg-white p-4 shadow-sm mb-4" style="border-color: #e2e8f0;">
+          <div class="d-flex align-items-center justify-content-between pb-3 mb-3 border-bottom">
+            <div class="d-flex align-items-center gap-2">
+              <i class="fa-solid fa-address-card text-primary fs-5"></i>
+              <span class="fw-bold fs-6 text-dark">طلب تعديل بياناتي</span>
+            </div>
+            <span class="badge bg-light text-muted border rounded-pill px-2.5 py-1 small">
+              تحديث معتمد
+            </span>
+          </div>
+
+          <!-- Advisory Notice Box -->
+          <div class="p-3 rounded-3 bg-light border border-light-subtle mb-4">
+            <div class="d-flex align-items-start gap-2.5 text-muted small" style="line-height: 1.8;">
+              <i class="fa-solid fa-shield-halved text-primary mt-1 fs-6 flex-shrink-0"></i>
+              <span>جميع الحقول التالية إلزامية. أي تغيير لا يصبح نافذاً إلا بعد موافقة الإدارة. عند تغيير البريد يُطلب
+                توثيق البريد الجديد من صفحة الملف. وعند تغيير الجوال، تُلغى حالة توثيق الرقم السابق؛ ويظل توثيق الحساب
+                في الويب معتمداً على البريد وفق سياسة المشروع الحالية.</span>
+            </div>
+          </div>
+
+          <form
+            onsubmit="event.preventDefault(); alert('تم إرسال طلب التعديل للإدارة بنجاح، ستتم مراجعته في أقرب وقت.');">
+            <!-- Full Name -->
+            <div class="mb-3">
+              <label class="form-label small fw-bold text-dark mb-1">الاسم الكامل *</label>
+              <input type="text" class="form-control py-2.5 px-3 bg-white border rounded-3 text-dark fw-bold"
+                value="عبدالرحمن العتيبي" required />
+            </div>
+
+            <!-- ID & Phone Row -->
+            <div class="row g-3 mb-3">
+              <div class="col-md-6">
+                <label class="form-label small fw-bold text-dark mb-1">رقم الهوية *</label>
+                <input type="text"
+                  class="form-control py-2.5 px-3 bg-white border rounded-3 text-dark fw-bold font-monospace"
+                  value="1077903311" required />
+              </div>
+              <div class="col-md-6">
+                <label class="form-label small fw-bold text-dark mb-1">رقم الجوال *</label>
+                <input type="text"
+                  class="form-control py-2.5 px-3 bg-white border rounded-3 text-dark fw-bold font-monospace"
+                  value="505797300" required />
+              </div>
+            </div>
+
+            <!-- Email & City Row -->
+            <div class="row g-3 mb-4">
+              <div class="col-md-6">
+                <label class="form-label small fw-bold text-dark mb-1">البريد الإلكتروني *</label>
+                <input type="email"
+                  class="form-control py-2.5 px-3 bg-white border rounded-3 text-dark fw-bold font-monospace"
+                  value="otaibifirst@gmail.com" required />
+              </div>
+              <div class="col-md-6">
+                <label class="form-label small fw-bold text-dark mb-1">المدينة *</label>
+                <input type="text" class="form-control py-2.5 px-3 bg-white border rounded-3 text-dark fw-bold"
+                  value="الرياض" required />
+              </div>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit"
+              class="btn btn-primary w-100 py-3 rounded-3 fw-bold d-flex align-items-center justify-content-center gap-2 fs-6 shadow-sm">
+              <i class="fa-solid fa-paper-plane"></i>
+              <span>إرسال طلب التعديل للإدارة</span>
+            </button>
+          </form>
+        </div>
+
+        <!-- Card 2: Bank Details Form -->
+        <div class="card border rounded-4 bg-white p-4 shadow-sm mb-4" style="border-color: #e2e8f0;">
+          <div class="d-flex align-items-center justify-content-between pb-3 mb-3 border-bottom">
+            <div class="d-flex align-items-center gap-2">
+              <i class="fa-solid fa-building-columns text-primary fs-5"></i>
+              <span class="fw-bold fs-6 text-dark">البيانات البنكية المعتمدة</span>
+            </div>
+            <span
+              class="badge bg-success-subtle text-success border border-success-subtle rounded-pill px-2.5 py-1 small fw-semibold">
+              <i class="fa-solid fa-circle-check me-1"></i> معتمد للتحويل
+            </span>
+          </div>
+
+          <!-- Current Bank Info Preview Box -->
+          <div class="bg-light p-3 rounded-3 mb-4 border border-light-subtle d-flex flex-column">
+            <div class="d-flex align-items-center justify-content-between py-2 border-bottom">
+              <span class="text-muted small">الآيبان السعودي</span>
+              <span class="font-monospace text-dark fw-bold small text-break">SA4880000449608016158841</span>
+            </div>
+            <div class="d-flex align-items-center justify-content-between py-2 border-bottom">
+              <span class="text-muted small">البنك</span>
+              <span class="fw-bold text-dark small">مصرف الراجحي</span>
+            </div>
+            <div class="d-flex align-items-center justify-content-between py-2">
+              <span class="text-muted small">صاحب الحساب</span>
+              <span class="fw-bold text-dark small">عبدالرحمن العتيبي</span>
+            </div>
+          </div>
+
+          <form onsubmit="event.preventDefault(); alert('تم حفظ البيانات البنكية بنجاح');">
+            <!-- Saudi IBAN Field -->
+            <div class="mb-3">
+              <label class="form-label small fw-bold text-dark mb-1">رقم الآيبان السعودي *</label>
+              <input type="text"
+                class="form-control py-2.5 px-3 bg-white border rounded-3 text-dark fw-bold font-monospace"
+                value="SA4880000449608016158841" required />
+            </div>
+
+            <!-- Bank Select Field -->
+            <div class="mb-3">
+              <label class="form-label small fw-bold text-dark mb-1">البنك *</label>
+              <select class="form-select py-2.5 px-3 bg-white border rounded-3 text-dark fw-bold">
+                <option selected>مصرف الراجحي</option>
+                <option value="1">البنك الأهلي السعودي</option>
+                <option value="2">بنك الرياض</option>
+                <option value="3">مصرف الإنماء</option>
+              </select>
+            </div>
+
+            <!-- Account Owner Name Field -->
+            <div class="mb-4">
+              <label class="form-label small fw-bold text-dark mb-1">اسم صاحب الحساب *</label>
+              <input type="text" class="form-control py-2.5 px-3 bg-white border rounded-3 text-dark fw-bold"
+                value="عبدالرحمن العتيبي" required />
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit"
+              class="btn btn-primary w-100 py-3 rounded-3 fw-bold d-flex align-items-center justify-content-center gap-2 fs-6 shadow-sm">
+              <i class="fa-solid fa-floppy-disk"></i>
+              <span>حفظ البيانات البنكية</span>
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- Modal: Change Password -->
+  <div class="modal fade" id="changePasswordModal" tabindex="-1" aria-labelledby="changePasswordModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 rounded-4 shadow">
+        <div class="modal-header border-bottom py-3 px-4 bg-light">
+          <h5 class="modal-title fs-6 fw-bold text-dark d-flex align-items-center gap-2" id="changePasswordModalLabel">
+            <i class="fa-solid fa-key text-primary"></i>
+            <span>تغيير كلمة المرور</span>
+          </h5>
+          <button type="button" class="btn-close m-0" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+        </div>
+        <div class="modal-body p-4">
+          <form id="changePasswordForm"
+            onsubmit="event.preventDefault(); alert('تم تغيير كلمة المرور بنجاح'); bootstrap.Modal.getInstance(document.getElementById('changePasswordModal')).hide();">
+            <div class="mb-3">
+              <label class="form-label small fw-bold text-dark mb-1">كلمة المرور الحالية *</label>
+              <input type="password" class="form-control rounded-3 py-2 px-3" placeholder="أدخل كلمة المرور الحالية"
+                required />
+            </div>
+            <div class="mb-3">
+              <label class="form-label small fw-bold text-dark mb-1">كلمة المرور الجديدة *</label>
+              <input type="password" class="form-control rounded-3 py-2 px-3" placeholder="أدخل كلمة المرور الجديدة"
+                required />
+            </div>
+            <div class="mb-4">
+              <label class="form-label small fw-bold text-dark mb-1">تأكيد كلمة المرور الجديدة *</label>
+              <input type="password" class="form-control rounded-3 py-2 px-3"
+                placeholder="أعد إدخال كلمة المرور الجديدة" required />
+            </div>
+            <div class="d-flex justify-content-end gap-2">
+              <button type="button" class="btn btn-light rounded-3 px-3 fw-semibold"
+                data-bs-dismiss="modal">إلغاء</button>
+              <button type="submit" class="btn btn-primary rounded-3 px-4 fw-bold shadow-sm">
+                <i class="fa-solid fa-check me-1"></i> حفظ كلمة المرور
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fixed Mobile Bottom Navigation Bar -->
+  <div class="mobile-bottom-nav">
+    <a href="home.html" class="mobile-nav-item">
+      <div class="mobile-nav-icon-wrap">
+        <i class="fa-solid fa-house"></i>
+      </div>
+      <span>لوحتي</span>
+    </a>
+    <a href="booking.html" class="mobile-nav-item">
+      <div class="mobile-nav-icon-wrap">
+        <i class="fa-solid fa-calendar-check"></i>
+      </div>
+      <span>الحجز</span>
+    </a>
+    <a href="orders.html" class="mobile-nav-item mobile-nav-center">
+      <div class="mobile-nav-center-circle">
+        <i class="fa-solid fa-box"></i>
+      </div>
+      <span>طلباتي</span>
+    </a>
+    <a href="account.html" class="mobile-nav-item">
+      <div class="mobile-nav-icon-wrap">
+        <i class="fa-solid fa-wallet"></i>
+      </div>
+      <span>حسابي</span>
+    </a>
+    <a href="profile.html" class="mobile-nav-item active">
+      <div class="mobile-nav-icon-wrap">
+        <i class="fa-solid fa-user"></i>
+        <span class="mobile-active-dot"></span>
+      </div>
+      <span>ملفي</span>
+    </a>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="../js/script.js?v=2.6"></script>
+</body>
+
+</html>

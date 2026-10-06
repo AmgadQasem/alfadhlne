@@ -19,7 +19,57 @@
   <link rel="stylesheet" href="../css/bootstrap.min.css?v=1.1" />
 
   <!-- Custom Shared Styles -->
-  <link rel="stylesheet" href="../css/style.css?v=4.6" />
+  <link rel="stylesheet" href="../css/style.css?v=6.0" />
+  <style>
+    main.order-details-container,
+    .home-main-container.order-details-container,
+    .order-details-container {
+      max-width: 740px !important;
+      width: 100% !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      padding-left: 16px !important;
+      padding-right: 16px !important;
+      font-family: 'Readex Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    }
+    .order-fin-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 7px 0;
+      font-size: 13px;
+    }
+    .order-fin-row .text-muted {
+      color: #64748b !important;
+      font-weight: 500;
+      font-size: 13px;
+    }
+    .order-stat-num {
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: -0.2px;
+    }
+    .back-to-orders-link {
+      color: #64748b !important;
+      font-size: 12.5px !important;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.2s ease, transform 0.2s ease;
+    }
+    .back-to-orders-link i {
+      font-size: 10px !important;
+      transition: transform 0.2s ease;
+    }
+    .back-to-orders-link:hover {
+      color: #0284c7 !important;
+    }
+    .back-to-orders-link:hover i {
+      transform: translateX(3px);
+    }
+  </style>
 </head>
 <body class="home-page-body">
 
@@ -47,41 +97,90 @@
         <li><a href="profile.html" class="home-nav-link"><i class="fa-solid fa-user-gear"></i><span>ملفي</span></a></li>
       </ul>
 
-      <!-- LEFT (RTL-end): Controls (Bell + Circular Logout Button + Mobile Hamburger) -->
+      <!-- LEFT (RTL-end): Controls (Notifications + Logout Button + Mobile Hamburger) -->
       <div class="home-nav-left-controls">
-        <div class="nav-bell-icon" title="الإشعارات">
-          <i class="fa-regular fa-bell"></i>
-          <span class="nav-bell-dot"></span>
+        <!-- Notifications Dropdown -->
+        <div class="dropdown notifications-dropdown-wrapper">
+          <button class="nav-bell-icon dropdown-toggle border-0 p-0" type="button" id="notificationsDropdown" data-bs-toggle="dropdown" aria-expanded="false" title="الإشعارات">
+            <i class="fa-regular fa-bell"></i>
+            <span class="nav-bell-dot" id="navBellDot"></span>
+          </button>
+          <div class="dropdown-menu dropdown-menu-end notifications-dropdown-menu shadow-lg p-0 border-0" aria-labelledby="notificationsDropdown">
+            <div class="notifications-header p-3 border-bottom d-flex align-items-center justify-content-between">
+              <div class="d-flex align-items-center gap-2">
+                <h6 class="mb-0 fw-bold text-dark fs-6">الإشعارات</h6>
+                <span class="badge bg-primary-subtle text-primary rounded-pill fs-7 px-2" id="notifBadgeCount">3 جديد</span>
+              </div>
+              <button type="button" class="btn btn-link text-decoration-none p-0 fs-7 text-muted mark-all-read-btn" id="markAllReadBtn">تحديد الكل كمعاين</button>
+            </div>
+            <div class="notifications-body custom-scroll" style="max-height: 320px; overflow-y: auto;">
+              <a href="account.html" class="notification-item unread d-flex align-items-start gap-3 p-3 border-bottom text-decoration-none">
+                <div class="notif-icon bg-success-subtle text-success rounded-circle d-flex align-items-center justify-content-center flex-shrink-0" style="width: 38px; height: 38px;">
+                  <i class="fa-solid fa-coins fs-6"></i>
+                </div>
+                <div class="notif-content flex-grow-1">
+                  <div class="d-flex align-items-center justify-content-between mb-1">
+                    <span class="fw-bold text-dark fs-7">تم إيداع أرباحك</span>
+                    <span class="text-muted fs-7">منذ 10 د</span>
+                  </div>
+                  <p class="text-muted fs-7 mb-0">تم إيداع مبلغ 444.36 ر.س أرباح الطلب #ORD-98211 في حسابك البنكي.</p>
+                </div>
+              </a>
+              <a href="contract.html" class="notification-item unread d-flex align-items-start gap-3 p-3 border-bottom text-decoration-none">
+                <div class="notif-icon bg-primary-subtle text-primary rounded-circle d-flex align-items-center justify-content-center flex-shrink-0" style="width: 38px; height: 38px;">
+                  <i class="fa-solid fa-file-contract fs-6"></i>
+                </div>
+                <div class="notif-content flex-grow-1">
+                  <div class="d-flex align-items-center justify-content-between mb-1">
+                    <span class="fw-bold text-dark fs-7">توثيق العقد الرقمي</span>
+                    <span class="text-muted fs-7">منذ ساعة</span>
+                  </div>
+                  <p class="text-muted fs-7 mb-0">تم اعتماد وتوثيق عقد التوكيل للطلب #ORD-98402 بنجاح.</p>
+                </div>
+              </a>
+              <a href="orders.html" class="notification-item unread d-flex align-items-start gap-3 p-3 border-bottom text-decoration-none">
+                <div class="notif-icon bg-info-subtle text-info rounded-circle d-flex align-items-center justify-content-center flex-shrink-0" style="width: 38px; height: 38px;">
+                  <i class="fa-solid fa-box-check fs-6"></i>
+                </div>
+                <div class="notif-content flex-grow-1">
+                  <div class="d-flex align-items-center justify-content-between mb-1">
+                    <span class="fw-bold text-dark fs-7">تأكيد الحجز</span>
+                    <span class="text-muted fs-7">منذ 3 ساعات</span>
+                  </div>
+                  <p class="text-muted fs-7 mb-0">تم استلام طلب حجز أيفون 17 برو ماكس بنجاح وهو قيد المعالجة.</p>
+                </div>
+              </a>
+              <a href="profile.html" class="notification-item d-flex align-items-start gap-3 p-3 text-decoration-none">
+                <div class="notif-icon bg-secondary-subtle text-secondary rounded-circle d-flex align-items-center justify-content-center flex-shrink-0" style="width: 38px; height: 38px;">
+                  <i class="fa-solid fa-user-shield fs-6"></i>
+                </div>
+                <div class="notif-content flex-grow-1">
+                  <div class="d-flex align-items-center justify-content-between mb-1">
+                    <span class="fw-bold text-dark fs-7">تحديث الحساب البنكي</span>
+                    <span class="text-muted fs-7">أمس</span>
+                  </div>
+                  <p class="text-muted fs-7 mb-0">تم التوثيق وتأكيد بيانات الايبان SA0380000000608010167519 بنجاح.</p>
+                </div>
+              </a>
+            </div>
+            <div class="notifications-footer p-2.5 text-center border-top bg-light rounded-bottom-4">
+              <a href="orders.html" class="text-primary fw-semibold fs-7 text-decoration-none">عرض كافة السجلات والتحديثات</a>
+            </div>
+          </div>
         </div>
         <a href="../index.html" class="nav-logout-icon" title="تسجيل الخروج" aria-label="تسجيل الخروج">
           <i class="fa-solid fa-right-from-bracket"></i>
         </a>
-        <button class="mobile-menu-toggle" id="mobileMenuToggle" title="القائمة" aria-label="فتح القائمة">
-          <i class="fa-solid fa-bars" id="mobileMenuIcon"></i>
-        </button>
       </div>
 
-    </div>
-
-    <!-- Mobile Collapse Menu -->
-    <div class="mobile-nav-collapse" id="mobileNavCollapse">
-      <a href="home.html" class="mobile-collapse-link"><i class="fa-solid fa-house-chimney me-2"></i>لوحتي</a>
-      <a href="booking.html" class="mobile-collapse-link"><i class="fa-solid fa-calendar-check me-2"></i>الحجز</a>
-      <a href="orders.html" class="mobile-collapse-link active"><i class="fa-solid fa-box me-2"></i>طلباتي</a>
-      <a href="account.html" class="mobile-collapse-link"><i class="fa-solid fa-wallet me-2"></i>حسابي</a>
-      <a href="profile.html" class="mobile-collapse-link"><i class="fa-solid fa-user-gear me-2"></i>ملفي</a>
-      <a href="../index.html" class="mobile-collapse-link mobile-collapse-logout">
-        <i class="fa-solid fa-right-from-bracket me-2"></i>
-        تسجيل الخروج
-      </a>
     </div>
   </nav>
 
   <!-- Main Order Details Content Container -->
-  <main class="home-main-container mt-4 mb-5 pb-4" style="max-width: 980px;">
+  <main class="home-main-container order-details-container mt-4 mb-5 pb-4" style="max-width: 740px !important; margin: 24px auto !important;">
 
     <!-- Order Detail Hero Banner (Dark Navy Corporate Theme) -->
-    <div class="order-detail-hero">
+    <div class="order-detail-hero shadow-lg border-0 rounded-4">
       
       <!-- Top Bar: Code, Date & Status Pill -->
       <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3">
@@ -95,35 +194,35 @@
 
         <div>
           <span class="badge bg-success text-white px-3 py-1.5 rounded-pill fw-bold d-inline-flex align-items-center gap-1.5 shadow-sm" style="font-size: 13px;">
-            <i class="fa-solid fa-flag-checkered"></i>
-            <span>مكتمل</span>
+            <i class="fa-solid fa-circle-check"></i>
+            <span>مكتمل ومكتمل الإيداع</span>
           </span>
         </div>
       </div>
 
       <!-- Product Title -->
       <h1 class="fs-4 fw-bold text-white mb-4 text-center text-sm-start">
-        Apple iPhone 17 Pro 1T أزرق داكن
+        Apple iPhone 17 Pro 1TB أزرق داكن
       </h1>
 
       <!-- 3 Stat Tiles inside Banner -->
-      <div class="row g-3 mb-2">
+      <div class="row g-3 mb-4">
         <div class="col-12 col-sm-4">
           <div class="order-stat-tile">
-            <div class="text-white-50 small mb-1">الإجمالي المدفوع</div>
-            <div class="fs-5 fw-bold text-white font-monospace">22,219.98 <small class="fs-7 fw-normal text-white-50">ريال</small></div>
+            <div class="text-white-50 small mb-1">رأس المال المدفوع</div>
+            <div class="order-stat-num text-white">22,219.98 <small class="fs-7 fw-normal text-white-50">ريال</small></div>
           </div>
         </div>
         <div class="col-12 col-sm-4">
           <div class="order-stat-tile">
-            <div class="text-white-50 small mb-1">عمولتك</div>
-            <div class="fs-5 fw-bold text-success font-monospace" style="color: #4ade80 !important;">+ 1,555.40 <small class="fs-7 fw-normal text-white-50">ريال</small></div>
+            <div class="text-white-50 small mb-1">الأرباح المحققة (7%)</div>
+            <div class="order-stat-num text-success" style="color: #4ade80 !important;">+ 1,555.40 <small class="fs-7 fw-normal text-white-50">ريال</small></div>
           </div>
         </div>
         <div class="col-12 col-sm-4">
           <div class="order-stat-tile">
-            <div class="text-white-50 small mb-1">إجمالي المسترد</div>
-            <div class="fs-5 fw-bold text-white font-monospace">23,775.38 <small class="fs-7 fw-normal text-white-50">ريال</small></div>
+            <div class="text-white-50 small mb-1">إجمالي المبلغ المحول لحسابك</div>
+            <div class="order-stat-num text-white">23,775.38 <small class="fs-7 fw-normal text-white-50">ريال</small></div>
           </div>
         </div>
       </div>
@@ -135,7 +234,7 @@
 
         <!-- Step 1: الدفع (Completed) -->
         <div class="order-stepper-step completed">
-          <div class="order-stepper-circle completed" title="تم الدفع">
+          <div class="order-stepper-circle completed" title="تم الدفع بنجاح">
             <i class="fa-solid fa-check"></i>
           </div>
           <span class="order-stepper-label">الدفع</span>
@@ -143,7 +242,7 @@
 
         <!-- Step 2: العقد (Completed) -->
         <div class="order-stepper-step completed">
-          <div class="order-stepper-circle completed" title="تم توقيع العقد">
+          <div class="order-stepper-circle completed" title="تم توقيع العقد الإلكتروني">
             <i class="fa-solid fa-check"></i>
           </div>
           <span class="order-stepper-label">العقد</span>
@@ -151,24 +250,24 @@
 
         <!-- Step 3: نشط (Completed) -->
         <div class="order-stepper-step completed">
-          <div class="order-stepper-circle completed" title="اكتملت مرحلة النشاط">
+          <div class="order-stepper-circle completed" title="اكتملت مرحلة الاستثمار بنجاح">
             <i class="fa-solid fa-check"></i>
           </div>
           <span class="order-stepper-label">نشط</span>
         </div>
 
-        <!-- Step 4: الاستلام (Completed) -->
+        <!-- Step 4: الاستلام والتصفية (Completed) -->
         <div class="order-stepper-step completed">
-          <div class="order-stepper-circle completed" title="تم الاستلام وتصفية المستحقات">
+          <div class="order-stepper-circle completed" title="تم إيداع الأرباح وتصفية المستحقات">
             <i class="fa-solid fa-check-double"></i>
           </div>
-          <span class="order-stepper-label">الاستلام</span>
+          <span class="order-stepper-label">الاستلام والتصفية</span>
         </div>
       </div>
 
     </div>
 
-    <!-- 2 Columns Grid: Financial Details (Right) & Payment Info (Left) -->
+    <!-- 2 Columns Grid: Financial Details (Right) & Payment/Settlement Info (Left) -->
     <div class="row g-4 mb-4">
 
       <!-- Right Column (Desktop: 7 cols): التفاصيل المالية -->
@@ -190,22 +289,22 @@
 
             <div class="order-fin-row">
               <span class="text-muted">سعر الوحدة (بدون ضريبة)</span>
-              <span class="fw-semibold text-dark font-monospace">4,830.43 ريال</span>
+              <span class="fw-semibold text-dark">4,830.43 ريال</span>
             </div>
 
             <div class="order-fin-row">
               <span class="text-muted">الإجمالي قبل الضريبة</span>
-              <span class="fw-semibold text-dark font-monospace">19,321.72 ريال</span>
+              <span class="fw-semibold text-dark">19,321.72 ريال</span>
             </div>
 
             <div class="order-fin-row">
               <span class="text-muted">ضريبة القيمة المضافة 15%</span>
-              <span class="fw-semibold text-dark font-monospace">2,898.26 ريال</span>
+              <span class="fw-semibold text-dark">2,898.26 ريال</span>
             </div>
 
             <div class="order-fin-row bg-light px-2 py-2 rounded-2 mt-1">
               <span class="fw-bold text-dark">تكلفة الشراء شامل الضريبة</span>
-              <span class="fw-bold text-dark font-monospace">22,219.98 ريال</span>
+              <span class="fw-bold text-dark">22,219.98 ريال</span>
             </div>
           </div>
 
@@ -215,22 +314,22 @@
 
             <div class="order-fin-row">
               <span class="text-muted">صافي رأس المال</span>
-              <span class="fw-semibold text-dark font-monospace">22,219.98 ريال</span>
+              <span class="fw-semibold text-dark">22,219.98 ريال</span>
             </div>
 
             <div class="order-fin-row">
               <span class="text-muted">صافي ربحك (عمولة 7%)</span>
-              <span class="fw-bold text-success font-monospace">+ 1,555.40 ريال</span>
+              <span class="fw-bold text-success">+ 1,555.40 ريال</span>
             </div>
 
             <div class="order-fin-row">
               <span class="fw-bold text-dark">إجمالي المسترد</span>
-              <span class="fw-bold text-primary font-monospace fs-6">23,775.38 ريال</span>
+              <span class="fw-bold text-primary fs-6">23,775.38 ريال</span>
             </div>
 
-            <div class="d-flex align-items-center justify-content-between p-2.5 rounded-3 bg-success-subtle border border-success-subtle mt-2">
-              <span class="text-success fw-bold small">نسبة الربح الصافي</span>
-              <span class="badge bg-success text-white fw-bold px-3 py-1 rounded-pill">7%</span>
+            <div class="order-profit-rate-box">
+              <span class="profit-rate-label">نسبة الربح الصافي</span>
+              <span class="profit-rate-value">7%</span>
             </div>
           </div>
         </div>
@@ -247,26 +346,36 @@
           <div class="d-flex flex-column gap-3">
             <div class="d-flex align-items-center justify-content-between py-2 border-bottom">
               <span class="text-muted small">الوسيلة</span>
-              <span class="badge bg-light text-dark border px-2.5 py-1.5 font-monospace fw-semibold d-inline-flex align-items-center gap-1.5">
-                <i class="fa-solid fa-building-columns text-primary"></i> حوالة بنكية
+              <span class="badge bg-light text-dark border px-2.5 py-1.5 fw-semibold d-inline-flex align-items-center gap-1.5" style="font-size: 12px;">
+                <i class="fa-solid fa-building-columns text-primary"></i> مدى / حوالة
               </span>
             </div>
 
             <div class="d-flex align-items-center justify-content-between py-2 border-bottom">
               <span class="text-muted small">الحالة</span>
-              <span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill px-3 py-1.5 fw-bold d-inline-flex align-items-center gap-1">
-                <i class="fa-solid fa-circle-check"></i> مؤكد
+              <span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill px-3 py-1.5 fw-bold d-inline-flex align-items-center gap-1" style="font-size: 12px;">
+                <i class="fa-solid fa-circle-check"></i> مكتمل ومودع
               </span>
             </div>
 
             <div class="d-flex align-items-center justify-content-between py-2 border-bottom">
               <span class="text-muted small">الموعد الأخير</span>
-              <span class="fw-bold text-warning font-monospace" style="color: #d97706 !important;">14:14 30/09</span>
+              <span class="fw-bold text-dark" dir="ltr" style="font-size: 13px;">29/09 14:30</span>
+            </div>
+
+            <div class="d-flex align-items-center justify-content-between py-2 border-bottom">
+              <span class="text-muted small">المرجع</span>
+              <span class="fw-bold text-primary" style="font-size: 13px;">TR-998234</span>
+            </div>
+
+            <div class="d-flex align-items-center justify-content-between py-2 border-bottom">
+              <span class="text-muted small">بنك الحساب</span>
+              <span class="fw-semibold text-dark" style="font-size: 13px;">مصرف الراجحي</span>
             </div>
 
             <div class="d-flex align-items-center justify-content-between py-2">
-              <span class="text-muted small">المرجع</span>
-              <span class="fw-bold text-dark font-monospace small">234234</span>
+              <span class="text-muted small">رقم الآيبان</span>
+              <span class="fw-semibold text-dark" dir="ltr" style="font-size: 11px; white-space: nowrap;">SA03 8000 0000 6080 1016 7519</span>
             </div>
           </div>
         </div>
@@ -283,11 +392,11 @@
           </div>
           <div>
             <h3 class="fs-6 fw-bold text-dark m-0">العقد الإلكتروني</h3>
-            <p class="text-muted small m-0">عقد إلكتروني موثق ومكتمل بنجاح</p>
+            <p class="text-muted small m-0">عقد رقمي معتمد وموثق نظامياً للطلب</p>
           </div>
         </div>
 
-        <a href="contract.html" class="btn btn-outline-success rounded-pill px-4 py-2 fw-bold d-inline-flex align-items-center gap-2 shadow-sm bg-white">
+        <a href="contract.html" class="btn btn-outline-success rounded-pill px-4 py-2 fw-bold d-inline-flex align-items-center gap-2 shadow-sm bg-white" style="font-size: 13px;">
           <i class="fa-regular fa-eye"></i>
           <span>عرض العقد الموقع</span>
           <i class="fa-solid fa-arrow-left"></i>
@@ -297,7 +406,7 @@
 
     <!-- Back to Orders Link -->
     <div class="text-center my-4">
-      <a href="orders.html" class="text-muted text-decoration-none fw-bold small d-inline-flex align-items-center gap-2 hover-primary">
+      <a href="orders.html" class="back-to-orders-link">
         <i class="fa-solid fa-arrow-right"></i>
         <span>العودة إلى طلباتي</span>
       </a>
@@ -340,7 +449,6 @@
   </div>
 
   <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="../js/bootstrap.bundle.min.js"></script>
   <script src="../js/script.js?v=2.6"></script>
 </body>

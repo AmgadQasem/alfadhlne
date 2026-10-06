@@ -42,16 +42,25 @@ document.addEventListener('DOMContentLoaded', function () {
     toTopBtn.addEventListener('click', function () {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
-  // Single-click offcanvas backdrop close listener
-  document.addEventListener('click', function (e) {
-    if (e.target.classList.contains('offcanvas-backdrop')) {
-      const openOffcanvas = document.querySelector('.offcanvas.show');
-      if (openOffcanvas && window.bootstrap && bootstrap.Offcanvas) {
-        const instance = bootstrap.Offcanvas.getInstance(openOffcanvas) || new bootstrap.Offcanvas(openOffcanvas);
-        if (instance) instance.hide();
-      }
-    }
-  });
+  }
+
+  // --------------------------------------------------------------------------
+  // Mobile Offcanvas Drawer Native Bootstrap Management
+  // --------------------------------------------------------------------------
+  const mobileDrawerEl = document.getElementById('lpMobileDrawer');
+  if (mobileDrawerEl) {
+    // Smoothly close drawer when navigation links inside drawer are clicked
+    mobileDrawerEl.querySelectorAll('a[href]').forEach(function (link) {
+      link.addEventListener('click', function () {
+        if (window.bootstrap && bootstrap.Offcanvas) {
+          const bsDrawer = bootstrap.Offcanvas.getInstance(mobileDrawerEl) || bootstrap.Offcanvas.getOrCreateInstance(mobileDrawerEl);
+          if (bsDrawer) {
+            bsDrawer.hide();
+          }
+        }
+      });
+    });
+  }
 
   // --------------------------------------------------------------------------
   // 2. Navbar Floating & Active Link Scrollspy

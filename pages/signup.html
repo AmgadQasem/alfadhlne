@@ -6,27 +6,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>إنشاء حساب جديد - منصة الفضل للاتصالات</title>
 
-  <!-- Google Fonts Readex Pro -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Font Awesome 6 Pro / Free CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <link rel="stylesheet" href="../css/font-awesome-pro.css?v=1.1" />
 
-  <!-- Bootstrap 5.3.3 RTL CDN & Local Fallback -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" />
   <link rel="stylesheet" href="../css/bootstrap.min.css?v=1.1" />
 
-  <!-- Custom Shared Styles -->
   <link rel="stylesheet" href="../css/style.css?v=1.1" />
 </head>
 
 <body class="auth-page-body">
 
   <div class="auth-card card-signup">
-    <!-- Header -->
     <div class="auth-header">
       <div class="auth-header-inline">
         <h1 class="auth-title">
@@ -37,33 +32,27 @@
       <p class="auth-subtitle">منصة الفضل للاتصالات</p>
     </div>
 
-    <!-- Form -->
     <form id="signupForm" autocomplete="off">
-      <!-- Full Name -->
       <div class="auth-form-group">
         <label for="fullName" class="auth-label">الاسم الكامل <span class="required-star">*</span></label>
         <input type="text" id="fullName" class="form-control" placeholder="محمد بن عبدالله الشمري" required />
       </div>
 
-      <!-- National ID / Iqama -->
       <div class="auth-form-group">
         <label for="nationalId" class="auth-label">رقم الهوية الوطنية / الإقامة <span class="required-star">*</span></label>
         <input type="text" id="nationalId" class="form-control" placeholder="1XXXXXXXXX" maxlength="10" pattern="[0-9]{10}" title="يرجى إدخال 10 أرقام" required />
       </div>
 
-      <!-- Mobile Number -->
       <div class="auth-form-group">
         <label for="phoneNumber" class="auth-label">رقم الجوال <span class="required-star">*</span></label>
         <input type="tel" id="phoneNumber" class="form-control" placeholder="05XXXXXXXX" maxlength="10" pattern="05[0-9]{8}" title="يرجى إدخال رقم جوال يبدأ بـ 05 ومكون من 10 أرقام" required />
       </div>
 
-      <!-- Email Address -->
       <div class="auth-form-group">
         <label for="emailAddress" class="auth-label">البريد الإلكتروني <span class="required-star">*</span></label>
         <input type="email" id="emailAddress" class="form-control" placeholder="example@email.com" required />
       </div>
 
-      <!-- City / Governorate -->
       <div class="auth-form-group">
         <label for="city" class="auth-label">المدينة / المحافظة</label>
         <input type="text" id="city" list="saudiCities" class="form-control" placeholder="ابحث عن مدينتك..." />
@@ -87,7 +76,6 @@
         </datalist>
       </div>
 
-      <!-- Verification Method Box -->
       <div class="verification-box">
         <div class="verification-title">طريقة توثيق الحساب</div>
         <div class="verification-options">
@@ -105,7 +93,6 @@
         </div>
       </div>
 
-      <!-- Password -->
       <div class="auth-form-group">
         <label for="password" class="auth-label">كلمة المرور <span class="required-star">*</span> <span class="pass-hint">(8 أحرف على الأقل)</span></label>
         <div class="auth-input-wrapper">
@@ -116,7 +103,6 @@
         </div>
       </div>
 
-      <!-- Terms & Conditions Box -->
       <div class="terms-card-box">
         <div class="terms-header-title">
           <i class="fa-solid fa-scroll"></i>
@@ -150,20 +136,16 @@
         </div>
       </div>
 
-      <!-- Submit Button -->
       <button type="submit" id="submitBtn" class="auth-btn-primary auth-btn-blue" disabled>
         إنشاء الحساب وإرسال رمز التحقق
       </button>
     </form>
 
-    <!-- Footer Link -->
     <div class="auth-footer-prompt">
       لديك حساب؟ <a href="signin.html">تسجيل الدخول</a>
     </div>
   </div>
 
-  <!-- JS Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="../js/bootstrap.bundle.min.js"></script>
   <script src="../js/script.js?v=1.1"></script>
 </body>

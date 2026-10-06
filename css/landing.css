@@ -1,9 +1,6 @@
-/* ==========================================================================
-   Al-Fadhel Telecom — Landing Page (Light Mode · Bootstrap 5 RTL)
-   Only page-specific enhancements live here; layout/spacing use Bootstrap.
-   ========================================================================== */
+/* Al-Fadhel Telecom — Landing Page Styles (Bootstrap 5 RTL) */
 
-/* ---------- 1. Design Tokens (Dashboard Identity - Sky/Navy Palette) ---------- */
+/* 1. Design Tokens */
 :root {
   --lp-navy-900: #0b1f3a;
   --lp-navy-800: #15325b;
@@ -156,12 +153,10 @@ body.landing-page {
 }
 
 .offcanvas-backdrop {
-  background-color: rgba(15, 23, 42, 0.4) !important;
+  background-color: rgba(15, 23, 42, 0.45) !important;
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
   z-index: 1040 !important;
-  cursor: pointer !important;
-  pointer-events: auto !important;
 }
 
 .lp-logo {
@@ -1487,6 +1482,7 @@ body.landing-page {
 
 /* Light Mode Offcanvas Drawer Override */
 #lpMobileDrawer.offcanvas {
+  z-index: 1090 !important;
   background-color: #ffffff !important;
   color: #0f172a !important;
   box-shadow: 0 10px 40px rgba(15, 23, 42, 0.15) !important;
@@ -1704,6 +1700,17 @@ body.landing-page {
     animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important;
   }
+}
   html { scroll-behavior: auto; }
   .js .reveal { opacity: 1; transform: none; }
 }
+
+/* ---------- 20. Offcanvas Mobile Drawer Z-Index Hierarchy ---------- */
+#lpMobileDrawer.offcanvas {
+  z-index: 1090 !important;
+}
+
+.offcanvas-backdrop {
+  z-index: 1080 !important;
+}
+

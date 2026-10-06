@@ -19,7 +19,57 @@
   <link rel="stylesheet" href="../css/bootstrap.min.css?v=1.1" />
 
   <!-- Custom Shared Styles -->
-  <link rel="stylesheet" href="../css/style.css?v=4.7" />
+  <link rel="stylesheet" href="../css/style.css?v=6.0" />
+  <style>
+    main.order-details-container,
+    .home-main-container.order-details-container,
+    .order-details-container {
+      max-width: 740px !important;
+      width: 100% !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      padding-left: 16px !important;
+      padding-right: 16px !important;
+      font-family: 'Readex Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    }
+    .order-fin-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 7px 0;
+      font-size: 13px;
+    }
+    .order-fin-row .text-muted {
+      color: #64748b !important;
+      font-weight: 500;
+      font-size: 13px;
+    }
+    .order-stat-num {
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: -0.2px;
+    }
+    .back-to-orders-link {
+      color: #64748b !important;
+      font-size: 12.5px !important;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.2s ease, transform 0.2s ease;
+    }
+    .back-to-orders-link i {
+      font-size: 10px !important;
+      transition: transform 0.2s ease;
+    }
+    .back-to-orders-link:hover {
+      color: #0284c7 !important;
+    }
+    .back-to-orders-link:hover i {
+      transform: translateX(3px);
+    }
+  </style>
 </head>
 <body class="home-page-body">
 
@@ -49,10 +99,11 @@
 
       <!-- LEFT (RTL-end): Controls (Bell + Circular Logout Button + Mobile Hamburger) -->
       <div class="home-nav-left-controls">
-        <div class="nav-bell-icon" title="الإشعارات">
+        <!-- Notifications Direct Link -->
+        <a href="notifications.html" class="nav-bell-icon text-decoration-none border-0 p-0 position-relative" title="الإشعارات">
           <i class="fa-regular fa-bell"></i>
-          <span class="nav-bell-dot"></span>
-        </div>
+          <span class="nav-bell-dot" id="navBellDot"></span>
+        </a>
         <a href="../index.html" class="nav-logout-icon" title="تسجيل الخروج" aria-label="تسجيل الخروج">
           <i class="fa-solid fa-right-from-bracket"></i>
         </a>
@@ -78,7 +129,7 @@
   </nav>
 
   <!-- Main Order Details Content Container -->
-  <main class="home-main-container mt-4 mb-5 pb-4" style="max-width: 980px;">
+  <main class="home-main-container order-details-container mt-4 mb-5 pb-4" style="max-width: 740px !important; margin: 24px auto !important;">
 
     <!-- Order Detail Hero Banner (Dark Navy Theme with Canceled Status) -->
     <div class="order-detail-hero">
@@ -111,19 +162,19 @@
         <div class="col-12 col-sm-4">
           <div class="order-stat-tile">
             <div class="text-white-50 small mb-1">الإجمالي المدفوع</div>
-            <div class="fs-5 fw-bold text-white font-monospace">5,888.00 <small class="fs-7 fw-normal text-white-50">ريال</small></div>
+            <div class="order-stat-num text-white">5,888.00 <small class="fs-7 fw-normal text-white-50">ريال</small></div>
           </div>
         </div>
         <div class="col-12 col-sm-4">
           <div class="order-stat-tile">
             <div class="text-white-50 small mb-1">عمولتك</div>
-            <div class="fs-5 fw-bold text-success font-monospace" style="color: #4ade80 !important;">+ 412.16 <small class="fs-7 fw-normal text-white-50">ريال</small></div>
+            <div class="order-stat-num text-success" style="color: #4ade80 !important;">+ 412.16 <small class="fs-7 fw-normal text-white-50">ريال</small></div>
           </div>
         </div>
         <div class="col-12 col-sm-4">
           <div class="order-stat-tile">
             <div class="text-white-50 small mb-1">إجمالي المسترد</div>
-            <div class="fs-5 fw-bold text-white font-monospace">6,300.16 <small class="fs-7 fw-normal text-white-50">ريال</small></div>
+            <div class="order-stat-num text-white">6,300.16 <small class="fs-7 fw-normal text-white-50">ريال</small></div>
           </div>
         </div>
       </div>
@@ -190,22 +241,22 @@
 
             <div class="order-fin-row">
               <span class="text-muted">سعر الوحدة (بدون ضريبة)</span>
-              <span class="fw-semibold text-dark font-monospace">5,120.00 ريال</span>
+              <span class="fw-semibold text-dark">5,120.00 ريال</span>
             </div>
 
             <div class="order-fin-row">
               <span class="text-muted">الإجمالي قبل الضريبة</span>
-              <span class="fw-semibold text-dark font-monospace">5,120.00 ريال</span>
+              <span class="fw-semibold text-dark">5,120.00 ريال</span>
             </div>
 
             <div class="order-fin-row">
               <span class="text-muted">ضريبة القيمة المضافة 15%</span>
-              <span class="fw-semibold text-dark font-monospace">768.00 ريال</span>
+              <span class="fw-semibold text-dark">768.00 ريال</span>
             </div>
 
             <div class="order-fin-row bg-light px-2 py-2 rounded-2 mt-1">
               <span class="fw-bold text-dark">تكلفة الشراء شامل الضريبة</span>
-              <span class="fw-bold text-dark font-monospace">5,888.00 ريال</span>
+              <span class="fw-bold text-dark">5,888.00 ريال</span>
             </div>
           </div>
 
@@ -215,22 +266,22 @@
 
             <div class="order-fin-row">
               <span class="text-muted">صافي رأس المال</span>
-              <span class="fw-semibold text-dark font-monospace">5,888.00 ريال</span>
+              <span class="fw-semibold text-dark">5,888.00 ريال</span>
             </div>
 
             <div class="order-fin-row">
               <span class="text-muted">صافي ربحك (عمولة 7%)</span>
-              <span class="fw-bold text-success font-monospace">+ 412.16 ريال</span>
+              <span class="fw-bold text-success">+ 412.16 ريال</span>
             </div>
 
             <div class="order-fin-row">
               <span class="fw-bold text-dark">إجمالي المسترد</span>
-              <span class="fw-bold text-primary font-monospace fs-6">6,300.16 ريال</span>
+              <span class="fw-bold text-primary fs-6">6,300.16 ريال</span>
             </div>
 
-            <div class="d-flex align-items-center justify-content-between p-2.5 rounded-3 bg-success-subtle border border-success-subtle mt-2">
-              <span class="text-success fw-bold small">نسبة الربح الصافي</span>
-              <span class="badge bg-success text-white fw-bold px-3 py-1 rounded-pill">7%</span>
+            <div class="order-profit-rate-box">
+              <span class="profit-rate-label">نسبة الربح الصافي</span>
+              <span class="profit-rate-value">7%</span>
             </div>
           </div>
         </div>
@@ -247,21 +298,21 @@
           <div class="d-flex flex-column gap-3">
             <div class="d-flex align-items-center justify-content-between py-2 border-bottom">
               <span class="text-muted small">الوسيلة</span>
-              <span class="badge bg-light text-dark border px-2.5 py-1.5 font-monospace fw-semibold d-inline-flex align-items-center gap-1.5">
+              <span class="badge bg-light text-dark border px-2.5 py-1.5 fw-semibold d-inline-flex align-items-center gap-1.5" style="font-size: 12px;">
                 <i class="fa-solid fa-building-columns text-primary"></i> حوالة بنكية
               </span>
             </div>
 
             <div class="d-flex align-items-center justify-content-between py-2 border-bottom">
               <span class="text-muted small">الحالة</span>
-              <span class="badge bg-danger-subtle text-danger border border-danger-subtle rounded-pill px-3 py-1.5 fw-bold d-inline-flex align-items-center gap-1">
+              <span class="badge bg-danger-subtle text-danger border border-danger-subtle rounded-pill px-3 py-1.5 fw-bold d-inline-flex align-items-center gap-1" style="font-size: 12px;">
                 <i class="fa-solid fa-circle-xmark"></i> مرفوض
               </span>
             </div>
 
             <div class="d-flex align-items-center justify-content-between py-2 border-bottom">
               <span class="text-muted small">الموعد الأخير</span>
-              <span class="fw-bold text-warning font-monospace" style="color: #d97706 !important;">05:17 02/10</span>
+              <span class="fw-bold text-warning" dir="ltr" style="color: #d97706 !important; font-size: 13px;">02/10 05:17</span>
             </div>
 
             <div class="d-flex align-items-center justify-content-between py-2">
@@ -303,7 +354,7 @@
             </button>
           </div>
           <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 text-muted small">
-            <div>آيبان: <span class="font-monospace fw-bold text-dark">SA4880000449608016158841</span></div>
+            <div>آيبان: <span class="fw-bold text-dark" dir="ltr">SA48 8000 0449 6080 1615 8841</span></div>
             <div>المستفيد: <span class="fw-bold text-dark">شركة فضل المتحدة التجارية</span></div>
           </div>
         </div>
@@ -319,7 +370,7 @@
             </button>
           </div>
           <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 text-muted small">
-            <div>آيبان: <span class="font-monospace fw-bold text-dark">SA5110000041200003174709</span></div>
+            <div>آيبان: <span class="fw-bold text-dark" dir="ltr">SA51 1000 0041 2000 0317 4709</span></div>
             <div>المستفيد: <span class="fw-bold text-dark">شركة فضل المتحدة التجارية</span></div>
           </div>
         </div>
@@ -335,7 +386,7 @@
             </button>
           </div>
           <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 text-muted small">
-            <div>آيبان: <span class="font-monospace fw-bold text-dark">SA1960100087282315958001</span></div>
+            <div>آيبان: <span class="fw-bold text-dark" dir="ltr">SA19 6010 0087 2823 1595 8001</span></div>
             <div>المستفيد: <span class="fw-bold text-dark">شركة فضل المتحدة التجارية</span></div>
           </div>
         </div>
@@ -351,7 +402,7 @@
             </button>
           </div>
           <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 text-muted small">
-            <div>آيبان: <span class="font-monospace fw-bold text-dark">SA1805000082801771354000</span></div>
+            <div>آيبان: <span class="fw-bold text-dark" dir="ltr">SA18 0500 0082 8017 7135 4000</span></div>
             <div>المستفيد: <span class="fw-bold text-dark">شركة فضل المتحدة التجارية</span></div>
           </div>
         </div>
@@ -367,7 +418,7 @@
             </button>
           </div>
           <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 text-muted small">
-            <div>آيبان: <span class="font-monospace fw-bold text-dark">SA8255000000090268100172</span></div>
+            <div>آيبان: <span class="fw-bold text-dark" dir="ltr">SA82 5500 0000 0902 6810 0172</span></div>
             <div>المستفيد: <span class="fw-bold text-dark">شركة فضل المتحدة التجارية</span></div>
           </div>
         </div>
@@ -383,7 +434,7 @@
             </button>
           </div>
           <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 text-muted small">
-            <div>آيبان: <span class="font-monospace fw-bold text-dark">SA6720400602422600550940</span></div>
+            <div>آيبان: <span class="fw-bold text-dark" dir="ltr">SA67 2040 0602 4226 0055 0940</span></div>
             <div>المستفيد: <span class="fw-bold text-dark">شركة فضل المتحدة التجارية</span></div>
           </div>
         </div>
@@ -391,7 +442,7 @@
         <!-- Transfer Required Amount Row -->
         <div class="p-3 bg-light rounded-3 d-flex align-items-center justify-content-between border">
           <span class="fw-bold text-dark small">المبلغ المطلوب تحويله:</span>
-          <span class="fw-bold text-primary fs-6 font-monospace">5,888.00 ريال</span>
+          <span class="fw-bold text-primary fs-6">5,888.00 ريال</span>
         </div>
 
       </div>
@@ -419,9 +470,9 @@
 
     <!-- Back to Orders Link -->
     <div class="text-center my-4">
-      <a href="orders.html" class="text-muted text-decoration-none fw-bold small d-inline-flex align-items-center gap-2 hover-primary">
+      <a href="orders.html" class="back-to-orders-link">
         <i class="fa-solid fa-arrow-right"></i>
-        <span>العودة إلى طلباتي</span>
+        <span>العودة إلى قائمة طلباتي</span>
       </a>
     </div>
 
@@ -462,7 +513,6 @@
   </div>
 
   <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="../js/bootstrap.bundle.min.js"></script>
   <script src="../js/script.js?v=2.6"></script>
 </body>

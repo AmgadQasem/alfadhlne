@@ -49,37 +49,29 @@
         <li><a href="booking.html" class="home-nav-link"><i
               class="fa-solid fa-calendar-check"></i><span>الحجز</span></a></li>
         <li><a href="orders.html" class="home-nav-link"><i class="fa-solid fa-box"></i><span>طلباتي</span></a></li>
+        <li><a href="notifications.html" class="home-nav-link"><i class="fa-solid fa-bell"></i><span>الإشعارات</span></a></li>
         <li><a href="account.html" class="home-nav-link"><i class="fa-solid fa-wallet"></i><span>حسابي</span></a></li>
         <li><a href="profile.html" class="home-nav-link"><i class="fa-solid fa-user-gear"></i><span>ملفي</span></a></li>
       </ul>
 
       <!-- LEFT (RTL-end): Controls (Bell + Circular Logout Button + Mobile Hamburger) -->
       <div class="home-nav-left-controls">
-        <div class="nav-bell-icon" title="الإشعارات">
+        <!-- Cart Icon Link -->
+        <a href="cart.html" class="nav-bell-icon text-decoration-none border-0 p-0 position-relative" title="سلة التسوق" aria-label="سلة التسوق">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="nav-cart-badge" id="navCartBadgeCount">2</span>
+        </a>
+
+        <!-- Notifications Direct Link -->
+        <a href="notifications.html" class="nav-bell-icon text-decoration-none border-0 p-0 position-relative" title="الإشعارات">
           <i class="fa-regular fa-bell"></i>
-          <span class="nav-bell-dot"></span>
-        </div>
+          <span class="nav-bell-dot" id="navBellDot"></span>
+        </a>
         <a href="../index.html" class="nav-logout-icon" title="تسجيل الخروج" aria-label="تسجيل الخروج">
           <i class="fa-solid fa-right-from-bracket"></i>
         </a>
-        <button class="mobile-menu-toggle" id="mobileMenuToggle" title="القائمة" aria-label="فتح القائمة">
-          <i class="fa-solid fa-bars" id="mobileMenuIcon"></i>
-        </button>
       </div>
 
-    </div>
-
-    <!-- Mobile Collapse Menu (slide down) -->
-    <div class="mobile-nav-collapse" id="mobileNavCollapse">
-      <a href="home.html" class="mobile-collapse-link active"><i class="fa-solid fa-house-chimney me-2"></i>لوحتي</a>
-      <a href="booking.html" class="mobile-collapse-link"><i class="fa-solid fa-calendar-check me-2"></i>الحجز</a>
-      <a href="orders.html" class="mobile-collapse-link"><i class="fa-solid fa-box me-2"></i>طلباتي</a>
-      <a href="account.html" class="mobile-collapse-link"><i class="fa-solid fa-wallet me-2"></i>حسابي</a>
-      <a href="profile.html" class="mobile-collapse-link"><i class="fa-solid fa-user-gear me-2"></i>ملفي</a>
-      <a href="../index.html" class="mobile-collapse-link mobile-collapse-logout">
-        <i class="fa-solid fa-right-from-bracket me-2"></i>
-        تسجيل الخروج
-      </a>
     </div>
   </nav>
 
@@ -728,22 +720,8 @@
   </div>
 
   <!-- JS Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="../js/bootstrap.bundle.min.js"></script>
   <script src="../js/script.js?v=1.2"></script>
-</body>
-
-</html>
-<i class="fa-solid fa-user"></i>
-</div>
-<span>ملفي</span>
-</a>
-</div>
-
-<!-- JS Scripts -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="../js/bootstrap.bundle.min.js"></script>
-<script src="../js/script.js?v=1.2"></script>
 </body>
 
 </html>

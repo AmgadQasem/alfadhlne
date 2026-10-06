@@ -46,32 +46,22 @@
 
       <!-- LEFT (RTL-end): Controls (Bell + Circular Logout Button + Mobile Hamburger) -->
       <div class="home-nav-left-controls">
-        <div class="nav-bell-icon" title="الإشعارات">
+        <!-- Cart Icon Link -->
+        <a href="cart.html" class="nav-bell-icon text-decoration-none border-0 p-0 position-relative" title="سلة التسوق" aria-label="سلة التسوق">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="nav-cart-badge" id="navCartBadgeCount">2</span>
+        </a>
+
+        <!-- Notifications Direct Link -->
+        <a href="notifications.html" class="nav-bell-icon text-decoration-none border-0 p-0 position-relative" title="الإشعارات">
           <i class="fa-regular fa-bell"></i>
-          <span class="nav-bell-dot"></span>
-        </div>
+          <span class="nav-bell-dot" id="navBellDot"></span>
+        </a>
         <a href="../index.html" class="nav-logout-icon" title="تسجيل الخروج" aria-label="تسجيل الخروج">
           <i class="fa-solid fa-right-from-bracket"></i>
         </a>
-        <button class="mobile-menu-toggle" id="mobileMenuToggle" title="القائمة" aria-label="فتح القائمة">
-          <i class="fa-solid fa-bars" id="mobileMenuIcon"></i>
-        </button>
       </div>
 
-    </div>
-
-    <!-- Mobile Collapse Menu (slide down) -->
-    <div class="mobile-nav-collapse" id="mobileNavCollapse">
-      <a href="home.html" class="mobile-collapse-link"><i class="fa-solid fa-house-chimney me-2"></i>لوحتي</a>
-      <a href="booking.html" class="mobile-collapse-link active"><i
-          class="fa-solid fa-calendar-check me-2"></i>الحجز</a>
-      <a href="orders.html" class="mobile-collapse-link"><i class="fa-solid fa-box me-2"></i>طلباتي</a>
-      <a href="account.html" class="mobile-collapse-link"><i class="fa-solid fa-wallet me-2"></i>حسابي</a>
-      <a href="profile.html" class="mobile-collapse-link"><i class="fa-solid fa-user-gear me-2"></i>ملفي</a>
-      <a href="../index.html" class="mobile-collapse-link mobile-collapse-logout">
-        <i class="fa-solid fa-right-from-bracket me-2"></i>
-        تسجيل الخروج
-      </a>
     </div>
   </nav>
 
@@ -197,10 +187,16 @@
           </div>
           <span class="commission-text">412.16 ريال</span>
         </div>
-        <button type="button" class="btn-book-now" onclick="handleBookClick(this)">
-          <i class="fa-solid fa-cart-plus"></i>
-          <span>احجز الآن</span>
-        </button>
+        <div class="d-flex align-items-center gap-2 mt-2 w-100">
+          <button type="button" class="btn-book-now flex-grow-1" onclick="handleBookClick(this)">
+            <i class="fa-solid fa-bolt me-1"></i>
+            <span>احجز الآن</span>
+          </button>
+          <button type="button" class="btn-add-to-cart" onclick="handleAddToCart(this)" title="إضافة إلى العربة">
+            <i class="fa-solid fa-cart-plus"></i>
+            <span>السلة</span>
+          </button>
+        </div>
       </div>
 
       <!-- Card 2: Apple iPhone 17 Pro Max 512GB أزرق داكن -->
@@ -252,10 +248,16 @@
           </div>
           <span class="commission-text">357.77 ريال</span>
         </div>
-        <button type="button" class="btn-book-now" onclick="handleBookClick(this)">
-          <i class="fa-solid fa-cart-plus"></i>
-          <span>احجز الآن</span>
-        </button>
+        <div class="d-flex align-items-center gap-2 mt-2 w-100">
+          <button type="button" class="btn-book-now flex-grow-1" onclick="handleBookClick(this)">
+            <i class="fa-solid fa-bolt me-1"></i>
+            <span>احجز الآن</span>
+          </button>
+          <button type="button" class="btn-add-to-cart" onclick="handleAddToCart(this)" title="إضافة إلى العربة">
+            <i class="fa-solid fa-cart-plus"></i>
+            <span>السلة</span>
+          </button>
+        </div>
       </div>
 
       <!-- Card 3: Apple iPhone 17 Pro Max 512GB أزرق داكن -->
@@ -307,10 +309,16 @@
           </div>
           <span class="commission-text">357.77 ريال</span>
         </div>
-        <button type="button" class="btn-book-now" onclick="handleBookClick(this)">
-          <i class="fa-solid fa-cart-plus"></i>
-          <span>احجز الآن</span>
-        </button>
+        <div class="d-flex align-items-center gap-2 mt-2 w-100">
+          <button type="button" class="btn-book-now flex-grow-1" onclick="handleBookClick(this)">
+            <i class="fa-solid fa-bolt me-1"></i>
+            <span>احجز الآن</span>
+          </button>
+          <button type="button" class="btn-add-to-cart" onclick="handleAddToCart(this)" title="إضافة إلى العربة">
+            <i class="fa-solid fa-cart-plus"></i>
+            <span>السلة</span>
+          </button>
+        </div>
       </div>
 
       <!-- Card 4: Apple iPhone 17 Pro Max 1T أزرق داكن -->
@@ -362,10 +370,16 @@
           </div>
           <span class="commission-text">412.16 ريال</span>
         </div>
-        <button type="button" class="btn-book-now" onclick="handleBookClick(this)">
-          <i class="fa-solid fa-cart-plus"></i>
-          <span>احجز الآن</span>
-        </button>
+        <div class="d-flex align-items-center gap-2 mt-2 w-100">
+          <button type="button" class="btn-book-now flex-grow-1" onclick="handleBookClick(this)">
+            <i class="fa-solid fa-bolt me-1"></i>
+            <span>احجز الآن</span>
+          </button>
+          <button type="button" class="btn-add-to-cart" onclick="handleAddToCart(this)" title="إضافة إلى العربة">
+            <i class="fa-solid fa-cart-plus"></i>
+            <span>السلة</span>
+          </button>
+        </div>
       </div>
 
       <!-- Card 5: Apple iPhone 17 Pro Max 512GB برتقالي كوزمك -->
@@ -417,10 +431,16 @@
           </div>
           <span class="commission-text">357.77 ريال</span>
         </div>
-        <button type="button" class="btn-book-now" onclick="handleBookClick(this)">
-          <i class="fa-solid fa-cart-plus"></i>
-          <span>احجز الآن</span>
-        </button>
+        <div class="d-flex align-items-center gap-2 mt-2 w-100">
+          <button type="button" class="btn-book-now flex-grow-1" onclick="handleBookClick(this)">
+            <i class="fa-solid fa-bolt me-1"></i>
+            <span>احجز الآن</span>
+          </button>
+          <button type="button" class="btn-add-to-cart" onclick="handleAddToCart(this)" title="إضافة إلى العربة">
+            <i class="fa-solid fa-cart-plus"></i>
+            <span>السلة</span>
+          </button>
+        </div>
       </div>
 
       <!-- Card 6: Apple iPhone 17 256GB لافندر -->
@@ -472,10 +492,16 @@
           </div>
           <span class="commission-text">217.77 ريال</span>
         </div>
-        <button type="button" class="btn-book-now" onclick="handleBookClick(this)">
-          <i class="fa-solid fa-cart-plus"></i>
-          <span>احجز الآن</span>
-        </button>
+        <div class="d-flex align-items-center gap-2 mt-2 w-100">
+          <button type="button" class="btn-book-now flex-grow-1" onclick="handleBookClick(this)">
+            <i class="fa-solid fa-bolt me-1"></i>
+            <span>احجز الآن</span>
+          </button>
+          <button type="button" class="btn-add-to-cart" onclick="handleAddToCart(this)" title="إضافة إلى العربة">
+            <i class="fa-solid fa-cart-plus"></i>
+            <span>السلة</span>
+          </button>
+        </div>
       </div>
 
     </div><!-- /products-grid -->
@@ -627,7 +653,6 @@
     </a>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="../js/bootstrap.bundle.min.js"></script>
   <script src="../js/script.js?v=2.6"></script>
   <script>
@@ -648,28 +673,58 @@
       if (commEl) commEl.textContent = comm.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' ريال';
     }
 
-    // Modal handler
+    // Redirect to booking confirmation page matching exact reference design
     function handleBookClick(btn) {
-      const card = btn.closest('.product-card');
-      const name = card.dataset.name;
-      const sku = card.dataset.sku;
-      const img = card.querySelector('.product-card-image img').getAttribute('src');
-      const qty = card.querySelector('.qty-val').textContent;
-      const unit = parseFloat(card.querySelector('.qty-val').dataset.unit).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' ريال';
-      const total = card.querySelector('.product-price-total-val').textContent;
-      const comm = card.querySelector('.commission-text').textContent;
+      window.location.href = "booking-confirm.html";
+    }
 
-      document.getElementById('modalProductName').textContent = name;
-      document.getElementById('modalProductSku').textContent = 'SKU: ' + sku;
-      document.getElementById('modalProductImg').setAttribute('src', img);
-      document.getElementById('modalProductQty').textContent = qty + ' أجهزة';
-      document.getElementById('modalProductUnitPrice').textContent = unit;
-      document.getElementById('modalProductTotal').textContent = total;
-      document.getElementById('modalProductCommission').textContent = comm;
+    // Add to cart handler (Shows toast notification & stays on page)
+    function handleAddToCart(btn) {
+      // 1. Update nav badge
+      const badge = document.getElementById('navCartBadgeCount');
+      if (badge) {
+        let cnt = parseInt(badge.textContent || 0) + 1;
+        badge.textContent = cnt;
+      }
 
-      const modalEl = document.getElementById('bookingConfirmModal');
-      const modal = new bootstrap.Modal(modalEl);
-      modal.show();
+      // 2. Temporarily change button state
+      const originalHTML = btn.innerHTML;
+      btn.innerHTML = '<i class="fa-solid fa-check text-success"></i> <span>تمت الإضافة</span>';
+      btn.style.borderColor = '#86efac';
+      btn.style.backgroundColor = '#f0fdf4';
+      btn.style.color = '#166534';
+
+      setTimeout(function() {
+        btn.innerHTML = originalHTML;
+        btn.style.borderColor = '';
+        btn.style.backgroundColor = '';
+        btn.style.color = '';
+      }, 2000);
+
+      // 3. Show floating toast notification
+      let existingToast = document.getElementById('cartToastNotif');
+      if (existingToast) existingToast.remove();
+
+      const toast = document.createElement('div');
+      toast.id = 'cartToastNotif';
+      toast.className = 'cart-toast-notification';
+      toast.innerHTML = `
+        <div class="d-flex align-items-center gap-2">
+          <i class="fa-solid fa-circle-check text-success fs-5"></i>
+          <span>تمت إضافة المنتج إلى السلة بنجاح</span>
+        </div>
+        <a href="cart.html" class="btn btn-sm btn-primary rounded-pill px-3 py-1 text-white fw-bold fs-7 text-decoration-none ms-2">عرض السلة</a>
+      `;
+      document.body.appendChild(toast);
+
+      setTimeout(function() {
+        if (toast) {
+          toast.style.opacity = '0';
+          toast.style.transform = 'translateY(10px)';
+          toast.style.transition = 'all 0.3s ease';
+          setTimeout(() => toast.remove(), 300);
+        }
+      }, 3500);
     }
 
     // Interactive category filter & search

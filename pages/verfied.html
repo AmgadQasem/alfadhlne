@@ -6,27 +6,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>توثيق الحساب - منصة الفضل للاتصالات</title>
   
-  <!-- Google Fonts Readex Pro -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
-  <!-- Font Awesome 6 Pro / Free CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <link rel="stylesheet" href="../css/font-awesome-pro.css?v=1.1" />
 
-  <!-- Bootstrap 5.3.3 RTL CDN & Local Fallback -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" />
   <link rel="stylesheet" href="../css/bootstrap.min.css?v=1.1" />
 
-  <!-- Custom Shared Styles -->
   <link rel="stylesheet" href="../css/style.css?v=1.1" />
 </head>
 
 <body class="auth-page-body">
 
   <div class="auth-card card-login">
-    <!-- Header -->
     <div class="auth-header">
       <div class="auth-header-inline">
         <h1 class="auth-title">
@@ -37,7 +32,6 @@
       <p class="auth-subtitle">منصة الفضل للاتصالات</p>
     </div>
 
-    <!-- Verification Info Notice -->
     <div class="verification-box text-center">
       <div class="verification-title mb-1">رمز التحقق (OTP)</div>
       <div class="verification-subtext text-center text-muted" style="font-size: 13px;">
@@ -45,9 +39,7 @@
       </div>
     </div>
 
-    <!-- OTP Form -->
     <form id="otpVerifyForm" autocomplete="off">
-      <!-- 6-Digit OTP Inputs -->
       <div class="otp-input-group">
         <input type="text" class="form-control otp-digit-input" maxlength="1" pattern="[0-9]" inputmode="numeric" required />
         <input type="text" class="form-control otp-digit-input" maxlength="1" pattern="[0-9]" inputmode="numeric" required />
@@ -57,13 +49,11 @@
         <input type="text" class="form-control otp-digit-input" maxlength="1" pattern="[0-9]" inputmode="numeric" required />
       </div>
 
-      <!-- Resend Timer Box -->
       <div class="otp-resend-box">
         <span>لم يصلك الرمز؟ </span>
         <button type="button" id="resendOtpBtn" class="otp-resend-btn" disabled>إعادة الإرسال (<span id="otpTimer">00:59</span>)</button>
       </div>
 
-      <!-- Submit Button -->
       <button type="submit" id="verifySubmitBtn" class="auth-btn-primary auth-btn-dark">
         <i class="fa-solid fa-circle-check"></i>
         <span>تأكيد وتوثيق الحساب</span>
@@ -72,14 +62,11 @@
 
     <div class="auth-divider"></div>
 
-    <!-- Login Link Footer -->
     <div class="auth-footer-prompt mb-0">
       العودة إلى <a href="signin.html">تسجيل الدخول</a>
     </div>
   </div>
 
-  <!-- JS Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="../js/bootstrap.bundle.min.js"></script>
   <script src="../js/script.js?v=1.1"></script>
 </body>

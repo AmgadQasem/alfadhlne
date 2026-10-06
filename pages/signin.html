@@ -6,29 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>تسجيل الدخول - منصة الفضل للاتصالات</title>
   
-  <!-- Google Fonts Readex Pro & IBM Plex Sans Arabic -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Readex+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
-  <!-- Font Awesome 6 Pro / Free CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <link rel="stylesheet" href="../css/font-awesome-pro.css" />
-
-  <!-- Bootstrap 5.3.3 RTL CDN & Local Fallback -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" />
   <link rel="stylesheet" href="../css/bootstrap.min.css" />
-
-  <!-- Custom Shared Styles -->
   <link rel="stylesheet" href="../css/style.css" />
 </head>
 
 <body class="auth-page-body">
 
   <div class="auth-card card-login">
-    <!-- Header with Brand Logo & Security Badges -->
     <div class="auth-header">
-      <!-- Brand Logo Image -->
       <div class="login-brand-logo-container">
         <a href="../index.html">
           <img src="../src/image/logo.webp" alt="الفضل للاتصالات" class="login-brand-img" />
@@ -38,7 +30,6 @@
       <h1 class="auth-title">الفضل للاتصالات</h1>
       <p class="auth-subtitle">تسجيل الدخول إلى حسابك</p>
 
-      <!-- Security Badges -->
       <div class="security-badges">
         <div class="security-badge-item">
           <i class="fa-solid fa-lock lock-icon"></i>
@@ -51,15 +42,12 @@
       </div>
     </div>
 
-    <!-- Form -->
     <form id="loginForm" autocomplete="off" action="home.html" onsubmit="event.preventDefault(); window.location.href='home.html';">
-      <!-- Email Address -->
       <div class="auth-form-group">
         <label for="loginEmail" class="auth-label">البريد الإلكتروني</label>
         <input type="email" id="loginEmail" class="form-control" placeholder="example@email.com" required />
       </div>
 
-      <!-- Password -->
       <div class="auth-form-group">
         <label for="loginPassword" class="auth-label">كلمة المرور</label>
         <div class="auth-input-wrapper">
@@ -70,7 +58,6 @@
         </div>
       </div>
 
-      <!-- Remember me & Forgot Password -->
       <div class="remember-forgot-row">
         <div class="remember-checkbox-group">
           <input type="checkbox" id="rememberMe" />
@@ -79,7 +66,6 @@
         <a href="forgetpassword.html" class="forgot-pass-link">نسيت كلمة المرور؟</a>
       </div>
 
-      <!-- Submit Button -->
       <button type="submit" id="loginSubmitBtn" class="auth-btn-primary auth-btn-dark">
         <i class="fa-solid fa-right-to-bracket"></i>
         <span>تسجيل الدخول</span>
@@ -88,12 +74,10 @@
 
     <div class="auth-divider"></div>
 
-    <!-- Signup Prompt Link -->
     <div class="auth-footer-prompt">
       ليس لديك حساب؟ <a href="signup.html">إنشاء حساب جديد</a>
     </div>
 
-    <!-- Legal Footer -->
     <div class="auth-legal-footer">
       <div>شركة فضل المتحدة - سجل تجاري 7017634457</div>
       <div class="legal-links mt-1">
@@ -102,8 +86,6 @@
     </div>
   </div>
 
-  <!-- JS Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="../js/bootstrap.bundle.min.js"></script>
   <script src="../js/script.js"></script>
 </body>

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>سلة التسوق والحجز - منصة الفضل للاتصالات</title>
+
+  <!-- Google Fonts Readex Pro -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Pro / Free CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="../css/font-awesome-pro.css?v=1.1" />
+
+  <!-- Bootstrap 5.3.3 RTL CDN & Local Fallback -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" />
+  <link rel="stylesheet" href="../css/bootstrap.min.css?v=1.1" />
+
+  <!-- Custom Shared Styles -->
+  <link rel="stylesheet" href="../css/style.css?v=5.2" />
+</head>
+<body class="home-page-body" style="background-color: #f4f7fa;">
+
+  <!-- Top Navbar -->
+  <nav class="home-navbar" id="homeNavbar">
+    <div class="home-nav-container">
+
+      <!-- RIGHT (RTL-start): Brand Logo & Title -->
+      <a href="home.html" class="home-nav-brand">
+        <div class="home-brand-logo-wrapper">
+          <img src="../src/image/logo.webp" alt="الفضل للاتصالات" />
+        </div>
+        <div class="home-brand-text-col">
+          <span class="home-brand-name">الفضل للاتصالات</span>
+          <span class="home-brand-sub d-none d-sm-block">بوابة العملاء المعتمدة</span>
+        </div>
+      </a>
+
+      <!-- CENTER (desktop): Navigation Links -->
+      <ul class="home-nav-links">
+        <li><a href="home.html" class="home-nav-link"><i class="fa-solid fa-house-chimney"></i><span>لوحتي</span></a></li>
+        <li><a href="booking.html" class="home-nav-link active"><i class="fa-solid fa-calendar-check"></i><span>الحجز</span></a></li>
+        <li><a href="orders.html" class="home-nav-link"><i class="fa-solid fa-box"></i><span>طلباتي</span></a></li>
+        <li><a href="account.html" class="home-nav-link"><i class="fa-solid fa-wallet"></i><span>حسابي</span></a></li>
+        <li><a href="profile.html" class="home-nav-link"><i class="fa-solid fa-user-gear"></i><span>ملفي</span></a></li>
+      </ul>
+
+      <!-- LEFT (RTL-end): Controls (Cart Icon + Bell + Logout Button + Mobile Hamburger) -->
+      <div class="home-nav-left-controls">
+        <!-- Cart Link (Active) -->
+        <a href="cart.html" class="nav-bell-icon text-decoration-none border-0 p-0 position-relative active" title="سلة التسوق" aria-label="سلة التسوق" style="background-color: #f0f9ff; border-color: #0284c7 !important; color: #0284c7;">
+          <i class="fa-solid fa-cart-shopping" style="color: #0284c7;"></i>
+          <span class="nav-cart-badge" id="navCartBadgeCount">2</span>
+        </a>
+
+        <!-- Notifications Link -->
+        <a href="notifications.html" class="nav-bell-icon text-decoration-none border-0 p-0 position-relative" title="الإشعارات">
+          <i class="fa-regular fa-bell"></i>
+          <span class="nav-bell-dot" id="navBellDot"></span>
+        </a>
+
+        <!-- Logout Link -->
+        <a href="../index.html" class="nav-logout-icon" title="تسجيل الخروج" aria-label="تسجيل الخروج">
+          <i class="fa-solid fa-right-from-bracket"></i>
+        </a>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- MAIN CART CONTAINER -->
+  <main class="home-main-container mt-4 mb-5 pb-4" style="max-width: 1040px !important; margin: 24px auto !important;">
+
+    <!-- Page Header Title -->
+    <div class="mb-4 pb-2 border-bottom">
+      <h1 class="fs-4 fw-bold text-dark mb-1 d-flex align-items-center gap-2">
+        <i class="fa-solid fa-cart-shopping text-primary"></i>
+        <span>سلة التسوق والحجز</span>
+      </h1>
+      <span class="text-muted fs-7">قم بمراجعة المنتجات المختارة والعمولة المتوقعة قبل إتمام عملية الحجز</span>
+    </div>
+
+    <!-- Active Cart Content Row (7:5 Grid) -->
+    <div class="row g-4" id="cartActiveLayout">
+
+      <!-- Right Column: Cart Item Cards -->
+      <div class="col-12 col-lg-7">
+        <div id="cartItemsList">
+
+          <!-- Item 1 -->
+          <div class="cart-item-card" data-price="5888.00" data-commission="412.16">
+            <div class="d-flex align-items-start gap-3">
+              <img src="../src/image/product_1 (3).webp" alt="iPhone 17 Pro Max" class="cart-item-img flex-shrink-0" />
+              
+              <div class="flex-grow-1">
+                <div class="d-flex align-items-start justify-content-between gap-2 mb-1">
+                  <h3 class="fs-6 fw-bold text-dark mb-0">Apple iPhone 17 Pro Max 1T برتقالي كوزمك</h3>
+                  <button type="button" class="btn btn-link text-danger p-0 border-0 fs-6 remove-item-btn" onclick="removeItem(this)" title="حذف المنتج">
+                    <i class="fa-regular fa-trash-can"></i>
+                  </button>
+                </div>
+
+                <div class="text-muted fs-7 mb-2">
+                  <span class="badge bg-light text-secondary border me-1">1TB</span>
+                  <span>SKU: IP17PROMAX-1T-ORANG</span>
+                </div>
+
+                <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 pt-2 border-top">
+                  <!-- Stepper -->
+                  <div class="d-inline-flex align-items-center border rounded-3 p-1 bg-light">
+                    <button type="button" class="btn btn-sm btn-white border-0 px-2 fw-bold text-dark" onclick="updateQty(this, -1)">-</button>
+                    <span class="fw-bold px-3 text-dark item-qty-val">1</span>
+                    <button type="button" class="btn btn-sm btn-white border-0 px-2 fw-bold text-dark" onclick="updateQty(this, 1)">+</button>
+                  </div>
+
+                  <!-- Price & Commission -->
+                  <div class="text-end">
+                    <div class="fw-bold text-dark fs-6 item-total-price">5,888.00 <small class="fw-normal fs-7">ر.س</small></div>
+                    <div class="text-success fs-7 fw-semibold item-commission-text">+ 412.16 ر.س عمولة</div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="cart-item-card" data-price="5554.99" data-commission="388.85">
+            <div class="d-flex align-items-start gap-3">
+              <img src="../src/image/product_1 (2).webp" alt="iPhone 17 Pro" class="cart-item-img flex-shrink-0" />
+              
+              <div class="flex-grow-1">
+                <div class="d-flex align-items-start justify-content-between gap-2 mb-1">
+                  <h3 class="fs-6 fw-bold text-dark mb-0">Apple iPhone 17 Pro 1T أزرق داكن</h3>
+                  <button type="button" class="btn btn-link text-danger p-0 border-0 fs-6 remove-item-btn" onclick="removeItem(this)" title="حذف المنتج">
+                    <i class="fa-regular fa-trash-can"></i>
+                  </button>
+                </div>
+
+                <div class="text-muted fs-7 mb-2">
+                  <span class="badge bg-light text-secondary border me-1">1TB</span>
+                  <span>SKU: IP17PRO-1T-BLUE</span>
+                </div>
+
+                <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 pt-2 border-top">
+                  <!-- Stepper -->
+                  <div class="d-inline-flex align-items-center border rounded-3 p-1 bg-light">
+                    <button type="button" class="btn btn-sm btn-white border-0 px-2 fw-bold text-dark" onclick="updateQty(this, -1)">-</button>
+                    <span class="fw-bold px-3 text-dark item-qty-val">1</span>
+                    <button type="button" class="btn btn-sm btn-white border-0 px-2 fw-bold text-dark" onclick="updateQty(this, 1)">+</button>
+                  </div>
+
+                  <!-- Price & Commission -->
+                  <div class="text-end">
+                    <div class="fw-bold text-dark fs-6 item-total-price">5,554.99 <small class="fw-normal fs-7">ر.س</small></div>
+                    <div class="text-success fs-7 fw-semibold item-commission-text">+ 388.85 ر.س عمولة</div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Side-by-Side Action Bar: Add Products Link + Clear Cart Link -->
+        <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 pt-3 mt-2 border-top">
+          <div class="d-flex align-items-center gap-3 flex-wrap">
+            <a href="booking.html" class="text-primary text-decoration-none fw-semibold fs-7 d-inline-flex align-items-center gap-1.5">
+              <i class="fa-solid fa-plus-circle"></i>
+              <span>إضافة منتجات أخرى للحجز</span>
+            </a>
+            <span class="text-muted opacity-50">|</span>
+            <button type="button" class="btn btn-link text-danger text-decoration-none fs-7 p-0 d-inline-flex align-items-center gap-1.5" onclick="clearCart()">
+              <i class="fa-regular fa-trash-can"></i>
+              <span>تفريغ السلة بالكامل</span>
+            </button>
+          </div>
+
+          <span class="text-muted fs-7 fw-medium" id="cartItemsCountText">إجمالي المنتجات: 2</span>
+        </div>
+      </div>
+
+      <!-- Left Column: Order Summary Card -->
+      <div class="col-12 col-lg-5">
+        <div class="card border rounded-4 bg-white p-4 shadow-sm sticky-top" style="top: 90px; border-color: #e2e8f0; border-radius: 18px !important;">
+          
+          <div class="d-flex align-items-center gap-2 pb-3 mb-3 border-bottom">
+            <i class="fa-solid fa-receipt text-primary fs-5"></i>
+            <h2 class="fs-6 fw-bold text-dark m-0">ملخص الحجز والأرباح</h2>
+          </div>
+
+          <!-- Summary Breakdown Rows -->
+          <div class="d-flex align-items-center justify-content-between py-2 border-bottom fs-7">
+            <span class="text-muted">مجموع سعر المنتجات (شامل الضريبة)</span>
+            <span class="fw-bold text-dark" id="summarySubtotal">11,442.99 ر.س</span>
+          </div>
+
+          <div class="d-flex align-items-center justify-content-between py-2 border-bottom fs-7">
+            <span class="text-muted">أرباح العمولة المستحقة (7%)</span>
+            <span class="fw-bold text-success" id="summaryCommission">+ 801.01 ر.س</span>
+          </div>
+
+          <!-- Highlight Profit Box -->
+          <div class="order-profit-rate-box my-3" style="margin-top: 12px !important; margin-bottom: 12px !important;">
+            <span class="profit-rate-label d-inline-flex align-items-center gap-1.5">
+              <i class="fa-solid fa-circle-check"></i>
+              <span>صافي الأرباح المتوقعة</span>
+            </span>
+            <span class="profit-rate-value" id="summaryNetProfit">+ 801.01 ر.س</span>
+          </div>
+
+          <!-- Grand Total Row -->
+          <div class="d-flex align-items-center justify-content-between pt-2 pb-3">
+            <span class="fw-bold text-dark fs-6">إجمالي المبلغ المحول لحسابك</span>
+            <span class="fw-bold text-primary fs-5" id="summaryGrandTotal">12,244.00 ر.س</span>
+          </div>
+
+          <!-- Primary Action Button -->
+          <a href="booking-confirm.html" class="btn btn-navy w-100 py-3 rounded-3 fw-bold fs-6 shadow-sm d-flex align-items-center justify-content-center gap-2 mb-3" style="background: #0f172a; border-color: #0f172a; color: #ffffff; border-radius: 12px !important;">
+            <i class="fa-solid fa-arrow-left"></i>
+            <span>المتابعة لتأكيد الحجز والدفع</span>
+          </a>
+
+          <!-- Trust Badge -->
+          <div class="text-center text-muted fs-7">
+            <i class="fa-solid fa-shield-check text-success me-1"></i>
+            <span>جميع الحجوزات موثقة بعقد توكيل إلكتروني رسمي</span>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Empty Cart Layout (Hidden by Default) -->
+    <div class="card border rounded-4 bg-white p-5 text-center shadow-sm d-none" id="cartEmptyLayout" style="border-radius: 18px !important;">
+      <div class="bg-light text-muted rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+        <i class="fa-solid fa-cart-shopping fs-1 text-secondary opacity-50"></i>
+      </div>
+      <h2 class="fs-5 fw-bold text-dark mb-2">سلة التسوق فارغة حالياً</h2>
+      <p class="text-muted fs-7 mb-4 mx-auto" style="max-width: 420px;">
+        لم تقم بإضافة أي منتجات إلى سلة الحجز بعد. يمكنك تصفح قائمة المنتجات المتاحة واختيار ما يناسبك للحجز الفوري.
+      </p>
+      <div>
+        <a href="booking.html" class="btn btn-primary py-2.5 px-4 rounded-3 fw-bold fs-6 shadow-sm d-inline-flex align-items-center gap-2">
+          <i class="fa-solid fa-mobile-screen"></i>
+          <span>تصفح المنتجات المتاحة للحجز</span>
+        </a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Mobile Bottom Nav -->
+  <div class="mobile-bottom-nav">
+    <a href="home.html" class="mobile-nav-item">
+      <div class="mobile-nav-icon-wrap"><i class="fa-solid fa-house"></i></div>
+      <span>لوحتي</span>
+    </a>
+    <a href="booking.html" class="mobile-nav-item">
+      <div class="mobile-nav-icon-wrap"><i class="fa-solid fa-calendar-check"></i></div>
+      <span>الحجز</span>
+    </a>
+    <a href="cart.html" class="mobile-nav-item active">
+      <div class="mobile-nav-icon-wrap"><i class="fa-solid fa-cart-shopping"></i></div>
+      <span>السلة</span>
+    </a>
+    <a href="orders.html" class="mobile-nav-item">
+      <div class="mobile-nav-icon-wrap"><i class="fa-solid fa-box"></i></div>
+      <span>طلباتي</span>
+    </a>
+    <a href="account.html" class="mobile-nav-item">
+      <div class="mobile-nav-icon-wrap"><i class="fa-solid fa-wallet"></i></div>
+      <span>حسابي</span>
+    </a>
+  </div>
+
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="../js/script.js?v=2.6"></script>
+  <script>
+    function updateCartTotals() {
+      const cards = document.querySelectorAll('.cart-item-card');
+      const navBadge = document.getElementById('navCartBadgeCount');
+      const activeLayout = document.getElementById('cartActiveLayout');
+      const emptyLayout = document.getElementById('cartEmptyLayout');
+      const itemsCountText = document.getElementById('cartItemsCountText');
+
+      if (cards.length === 0) {
+        if (activeLayout) activeLayout.classList.add('d-none');
+        if (emptyLayout) emptyLayout.classList.remove('d-none');
+        if (navBadge) navBadge.textContent = '0';
+        return;
+      }
+
+      let grandProductTotal = 0;
+      let grandCommissionTotal = 0;
+      let totalQtyCount = 0;
+
+      cards.forEach(card => {
+        const unitPrice = parseFloat(card.dataset.price || 0);
+        const unitComm = parseFloat(card.dataset.commission || 0);
+        const qtySpan = card.querySelector('.item-qty-val');
+        const qty = parseInt(qtySpan ? qtySpan.textContent : 1);
+
+        totalQtyCount += qty;
+        const itemTotalPrice = unitPrice * qty;
+        const itemCommTotal = unitComm * qty;
+
+        grandProductTotal += itemTotalPrice;
+        grandCommissionTotal += itemCommTotal;
+
+        const priceEl = card.querySelector('.item-total-price');
+        const commEl = card.querySelector('.item-commission-text');
+
+        if (priceEl) {
+          priceEl.innerHTML = itemTotalPrice.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' <small class="fw-normal fs-7">ر.س</small>';
+        }
+        if (commEl) {
+          commEl.textContent = '+ ' + itemCommTotal.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' ر.س عمولة';
+        }
+      });
+
+      const grandTotalReturn = grandProductTotal + grandCommissionTotal;
+
+      if (navBadge) navBadge.textContent = cards.length;
+      if (itemsCountText) itemsCountText.textContent = 'إجمالي المنتجات: ' + cards.length + ' (' + totalQtyCount + ' قطعة)';
+
+      document.getElementById('summarySubtotal').textContent = grandProductTotal.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' ر.س';
+      document.getElementById('summaryCommission').textContent = '+ ' + grandCommissionTotal.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' ر.س';
+      document.getElementById('summaryNetProfit').textContent = '+ ' + grandCommissionTotal.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' ر.س';
+      document.getElementById('summaryGrandTotal').textContent = grandTotalReturn.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' ر.س';
+    }
+
+    function updateQty(btn, delta) {
+      const card = btn.closest('.cart-item-card');
+      const qtySpan = card.querySelector('.item-qty-val');
+      let current = parseInt(qtySpan.textContent || 1);
+      current = Math.max(1, current + delta);
+      qtySpan.textContent = current;
+      updateCartTotals();
+    }
+
+    function removeItem(btn) {
+      const card = btn.closest('.cart-item-card');
+      if (card) {
+        card.style.opacity = '0';
+        card.style.transform = 'scale(0.95)';
+        card.style.transition = 'all 0.25s ease';
+        setTimeout(() => {
+          card.remove();
+          updateCartTotals();
+        }, 250);
+      }
+    }
+
+    function clearCart() {
+      if (confirm('هل أنت تأكد من تفريغ كافة المنتجات من السلة؟')) {
+        document.querySelectorAll('.cart-item-card').forEach(c => c.remove());
+        updateCartTotals();
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      updateCartTotals();
+    });
+  </script>
+</body>
+</html>
